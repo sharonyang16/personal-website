@@ -1,10 +1,10 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 
-const IndexPage: React.FC<PageProps> = () => {
-  return <>hai</>;
+const AboutPage: React.FC<PageProps> = () => {
+  return <>abouttt</>;
 };
 
-export default IndexPage;
+export default AboutPage;
 
 export const Head: HeadFC = () => <title>Home Page</title>;
