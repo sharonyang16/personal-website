@@ -1,11 +1,10 @@
 import React from "react";
-import { MantineProvider } from "@mantine/core";
-import { theme } from "./src/theme";
-import Layout from "./src/components/layout";
-import "./src/styles/global.css";
+import { ThemeProvider } from "@mui/material";
+import Layout from "./src/components/Layout";
+import theme from "./theme";
 
 export const wrapRootElement = ({ element }) => {
-  return <MantineProvider theme={theme}>{element} </MantineProvider>;
+  return <ThemeProvider theme={theme}>{element} </ThemeProvider>;
 };
 
 export const wrapPageElement = ({ element }) => {
