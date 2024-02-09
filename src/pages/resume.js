@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Container } from "@mui/material";
+import PageHeading from "../components/PageHeading";
 
 export default function ResumePage() {
-  return <Container maxWidth="sm">resume</Container>;
+  return <PageHeading title="Resume" />;
 }
