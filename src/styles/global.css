@@ -12,3 +12,7 @@ header {
   padding-top: 48px;
   padding-bottom: 48px;
 }
+
+main {
+  min-height: 70vh;
+}
