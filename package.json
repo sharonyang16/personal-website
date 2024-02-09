@@ -10,6 +10,7 @@
     "@emotion/react": "latest",
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
+    "@mui/icons-material": "^5.15.9",
     "@mui/material": "latest",
     "gatsby": "latest",
     "gatsby-plugin-react-helmet": "latest",

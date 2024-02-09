@@ -1,14 +1,31 @@
 import * as React from "react";
-import { Container, Typography, Box } from "@mui/material";
-
+import PageHeading from "../components/PageHeading";
+import BoldItalics from "../components/BoldItalics";
+import { Typography, Button, Box, Divider } from "@mui/material";
+import ShortcutIcon from "@mui/icons-material/Shortcut";
+import { navigate } from "gatsby";
 export default function IndexPage() {
   return (
-    <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
-          my website - index
-        </Typography>
+    <>
+      <PageHeading title="Hi, I'm Sharon!" />
+      <Typography variant="subtitle1">
+        I’m a <BoldItalics>Computer Science + Design</BoldItalics> student at{" "}
+        <BoldItalics>Northeastern University</BoldItalics> with an interest in{" "}
+        <BoldItalics>Web Development</BoldItalics> and{" "}
+        <BoldItalics>UI/UX Design</BoldItalics>.
+      </Typography>
+
+      <Box sx={{ display: "flex", justifyContent: "center", py: "2rem" }}>
+        <Button
+          variant="contained"
+          size="large"
+          endIcon={<ShortcutIcon fontSize="1.5rem" />}
+          onClick={() => navigate("/about")}
+        >
+          more about me
+        </Button>
       </Box>
-    </Container>
+      <Divider />
+    </>
   );
 }
