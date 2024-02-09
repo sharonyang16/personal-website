@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Container } from "@mui/material";
+import PageHeading from "../components/PageHeading";
 
 export default function DesignPage() {
-  return <Container maxWidth="sm">design</Container>;
+  return <PageHeading title="Design" />;
 }
