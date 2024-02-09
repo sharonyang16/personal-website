@@ -25,14 +25,14 @@ export default function Header() {
   return (
     <header>
       <Grid container spacing={2}>
-        <Grid item xs={4}>
+        <Grid item xs={3}>
           <Link to="/">
             <Typography variant="h4">Logo</Typography>
           </Link>
         </Grid>
         <Grid
           item
-          xs={8}
+          xs={9}
           sx={{
             display: "flex",
             justifyContent: "flex-end",
