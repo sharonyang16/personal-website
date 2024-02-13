@@ -41,7 +41,6 @@ export default function Header() {
           <nav>
             {links.map((linkData) => (
               <Link to={linkData.link} style={{ textDecoration: "none" }}>
-                {" "}
                 <Typography
                   variant="h5"
                   component="div"
