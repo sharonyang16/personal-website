@@ -39,16 +39,21 @@ export default function Header() {
           }}
         >
           <nav>
-            {links.map((linkData) => {
-              return (
-                <Link to={linkData.link}>
-                  {" "}
-                  <Typography variant="h5" textAlign="end">
-                    {linkData.name}
-                  </Typography>
-                </Link>
-              );
-            })}
+            {links.map((linkData) => (
+              <Link to={linkData.link} style={{ textDecoration: "none" }}>
+                {" "}
+                <Typography
+                  variant="h5"
+                  component="div"
+                  textAlign="end"
+                  fontStyle="italic"
+                  color="text.primary"
+                  fontSize="1.75rem"
+                >
+                  {linkData.name}
+                </Typography>
+              </Link>
+            ))}
           </nav>
         </Grid>
       </Grid>

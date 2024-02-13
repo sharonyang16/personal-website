@@ -23,9 +23,8 @@ const theme = createTheme({
       "Arial",
       "sans-serif",
     ].join(","),
-
     subtitle1: {
-      fontSize: "2rem",
+      fontSize: "36px",
       textAlign: "justify",
       fontWeight: "normal",
       color: "secondary",
