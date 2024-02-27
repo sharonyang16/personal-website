@@ -1,0 +1,19 @@
+name: Prettier Check
+on:
+  pull_request:
+    push:
+    branches:
+      - main
+jobs:
+  prettier:
+    name: Prettier Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Prettier Check
+        uses: rutajdash/prettier-cli-action@v1.0.2
+        with:
+          config_path: ../../.prettierrc.json
+          ignore_path: ../../.prettierignore
