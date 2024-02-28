@@ -24,7 +24,13 @@ function ResumeSectionHeading({ children }) {
     </Grid>
   );
 }
-
+function ResumeCompanyHeading({ children }) {
+  return (
+    <Grid item xs={6}>
+      <Typography variant='h5'> {children} </Typography>
+    </Grid>
+  );
+}
 function ResumeLeftGridBody({ children }) {
   return (
     <Grid item xs={6}>
@@ -49,6 +55,7 @@ export {
   ResumeGridMainContainer,
   ResumeGridRow,
   ResumeSectionHeading,
+  ResumeCompanyHeading,
   ResumeLeftGridBody,
   ResumeRightGridBody,
 };
