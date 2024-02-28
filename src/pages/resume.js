@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Typography, Box, Button, Divider } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
 import PageHeading from '../components/PageHeading';
+import ResumeSkillsSection from '../components/ResumePage/ResumeSkillsSection';
 
 const GOOGLE_DRIVE_ID = '1-cVdFp3Avcyp9dnqoPlh3LC8ncg4uxal';
 
@@ -24,6 +25,8 @@ export default function ResumePage() {
           download
         </Button>
       </Box>
+      <Divider />
+      <ResumeSkillsSection />
       <Divider />
     </>
   );
