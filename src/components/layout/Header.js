@@ -40,7 +40,11 @@ export default function Header() {
         >
           <nav>
             {links.map((linkData) => (
-              <Link to={linkData.link} style={{ textDecoration: 'none' }}>
+              <Link
+                to={linkData.link}
+                style={{ textDecoration: 'none' }}
+                key={linkData.url}
+              >
                 <Typography
                   variant='h5'
                   component='div'
