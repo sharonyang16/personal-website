@@ -7,7 +7,7 @@ on:
 
 jobs:
   run-linters:
-    name: Run linters
+    name: Run linter
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -18,7 +18,7 @@ jobs:
           node-version: 12
 
       - name: Install Node.js dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run Linter
         uses: wearerequired/lint-action@v2
