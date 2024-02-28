@@ -1,4 +1,4 @@
-## Chnages/Notes
+## Changes/Notes
 
 ## Screenshots
 

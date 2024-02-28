@@ -1,6 +1,6 @@
-import * as React from "react";
-import PageHeading from "../components/PageHeading";
+import * as React from 'react';
+import PageHeading from '../components/PageHeading';
 
 export default function CodePage() {
-  return <PageHeading title="Code" />;
+  return <PageHeading title='Code' />;
 }

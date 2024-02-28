@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Grid } from "@mui/material";
+import * as React from 'react';
+import { Grid } from '@mui/material';
 
 export default function Main({ children }) {
   return (
