@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Grid, Box, Link } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import Copyright from '../Copyright';
+import Copyright from './Copyright';
 
 const links = [
   {
