@@ -18,10 +18,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install Node.js dependencies
+      - name: Install Modules
         run: npm ci
 
-      - name: Run linter
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint: true
+      - name: Run linting check
+        run: npm lint --max-warnings=0
