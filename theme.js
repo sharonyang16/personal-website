@@ -23,12 +23,16 @@ const theme = createTheme({
       'Arial',
       'sans-serif',
     ].join(','),
+    h4: {
+      fontWeight: 'bold',
+    },
     subtitle1: {
       fontSize: '36px',
       textAlign: 'justify',
       fontWeight: 'normal',
       color: 'secondary',
     },
+    body2: { fontSize: '24px' },
   },
   components: {
     MuiButton: {
