@@ -7,7 +7,7 @@ on:
 
 jobs:
   run-linter:
-    name: Run linter
+    name: Linting Check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -21,5 +21,5 @@ jobs:
       - name: Install Modules
         run: npm ci
 
-      - name: Run linting check
+      - name: Run Linting Check
         run: npm run lint
