@@ -6,21 +6,22 @@ on:
       - main
 
 jobs:
-  run-linters:
+  run-linter:
     name: Run linter
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 18
 
       - name: Install Node.js dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Run Linter
+      - name: Run linter
         uses: wearerequired/lint-action@v2
         with:
           eslint: true

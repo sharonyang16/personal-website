@@ -7,7 +7,7 @@
     "not dead"
   ],
   "dependencies": {
-    "@emotion/react": "latest",
+    "@emotion/react": "^11.11.4",
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
     "@mui/icons-material": "^5.15.9",
