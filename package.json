@@ -12,6 +12,7 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "^5.15.9",
     "@mui/material": "latest",
+    "eslint": "^7.32.0",
     "gatsby": "latest",
     "gatsby-plugin-react-helmet": "latest",
     "react": "latest",
