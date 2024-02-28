@@ -53,7 +53,10 @@ function ToolsList(items) {
       </Typography>
 
       {items.map((bullet) => (
-        <ListItemText primaryTypographyProps={{ variant: 'body2' }}>
+        <ListItemText
+          primaryTypographyProps={{ variant: 'body2' }}
+          key={bullet}
+        >
           {bullet}
         </ListItemText>
       ))}
@@ -68,6 +71,7 @@ function BulletedList(items) {
         <ListItemText
           primaryTypographyProps={{ variant: 'body2' }}
           sx={{ display: 'list-item' }}
+          key={bullet}
         >
           {bullet}
         </ListItemText>
