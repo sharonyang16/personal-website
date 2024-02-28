@@ -3,6 +3,7 @@ import { Typography, Box, Button, Divider } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
 import PageHeading from '../components/PageHeading';
 import ResumeSkillsSection from '../components/ResumePage/ResumeSkillsSection';
+import ResumeEducationSection from '../components/ResumePage/ResumeEducationSection';
 
 const GOOGLE_DRIVE_ID = '1-cVdFp3Avcyp9dnqoPlh3LC8ncg4uxal';
 
@@ -25,6 +26,8 @@ export default function ResumePage() {
           download
         </Button>
       </Box>
+      <Divider />
+      <ResumeEducationSection />
       <Divider />
       <ResumeSkillsSection />
       <Divider />
