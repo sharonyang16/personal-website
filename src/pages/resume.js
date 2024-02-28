@@ -4,6 +4,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 import PageHeading from '../components/PageHeading';
 import ResumeSkillsSection from '../components/ResumePage/ResumeSkillsSection';
 import ResumeEducationSection from '../components/ResumePage/ResumeEducationSection';
+import ResumeExperiencesSection from '../components/ResumePage/ResumeExperiencesSection';
 
 const GOOGLE_DRIVE_ID = '1-cVdFp3Avcyp9dnqoPlh3LC8ncg4uxal';
 
@@ -31,6 +32,7 @@ export default function ResumePage() {
       <Divider />
       <ResumeSkillsSection />
       <Divider />
+      <ResumeExperiencesSection />
     </>
   );
 }
