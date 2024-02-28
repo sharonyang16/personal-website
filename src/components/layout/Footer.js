@@ -29,6 +29,7 @@ export default function Footer() {
                 target='_blank'
                 rel='noreferrer'
                 sx={{ ml: 2 }}
+                key={link.url}
               >
                 {link.icon}
               </Link>

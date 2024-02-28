@@ -22,7 +22,8 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "post-update": "echo \"codesandbox preview only, need an update\" && pnpm update --latest"
+    "post-update": "echo \"codesandbox preview only, need an update\" && pnpm update --latest",
+    "lint": "npx eslint ."
   },
   "devDependencies": {
     "eslint": "^8.57.0",
