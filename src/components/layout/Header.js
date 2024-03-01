@@ -26,9 +26,17 @@ export default function Header() {
   return (
     <header>
       <Grid container spacing={2}>
-        <Grid item xs={3}>
+        <Grid
+          item
+          xs={3}
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
           <Link to='/'>
-            <SvgIcon fontSize='36px'>
+            <SvgIcon sx={{ transform: 'scale(8)' }}>
               <Logo />
             </SvgIcon>
           </Link>
