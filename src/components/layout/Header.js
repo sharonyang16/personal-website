@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Grid, Typography } from '@mui/material';
+import { Grid, SvgIcon, Typography } from '@mui/material';
 import { Link } from 'gatsby-link';
+import Logo from '../../assets/Logo.svg';
 
 const links = [
   {
@@ -27,7 +28,9 @@ export default function Header() {
       <Grid container spacing={2}>
         <Grid item xs={3}>
           <Link to='/'>
-            <Typography variant='h4'>Logo</Typography>
+            <SvgIcon fontSize='36px'>
+              <Logo />
+            </SvgIcon>
           </Link>
         </Grid>
         <Grid
