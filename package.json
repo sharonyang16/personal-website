@@ -12,12 +12,16 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "^5.15.9",
     "@mui/material": "latest",
+    "axios": "^1.6.7",
     "gatsby": "latest",
     "gatsby-plugin-react-helmet": "latest",
     "gatsby-plugin-react-svg": "^3.3.0",
+    "json5": "^2.2.3",
+    "loader-utils": "^3.2.1",
     "react": "latest",
     "react-dom": "latest",
-    "react-helmet": "latest"
+    "react-helmet": "latest",
+    "xml2js": "^0.6.2"
   },
   "scripts": {
     "develop": "gatsby develop",
