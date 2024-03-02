@@ -36,7 +36,7 @@ const theme = createTheme({
       fontWeight: 'normal',
       color: 'secondary',
     },
-    body2: { fontSize: '24px' },
+    body1: { fontSize: '20px' },
   },
   components: {
     MuiButton: {

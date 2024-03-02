@@ -48,13 +48,13 @@ const CAMDITDescriptionBullets = [
 function ToolsList(items) {
   return (
     <List>
-      <Typography variant='body2' fontWeight='bold'>
+      <Typography variant='body1' fontWeight='bold'>
         Associated Tools/Skills
       </Typography>
 
       {items.map((bullet) => (
         <ListItemText
-          primaryTypographyProps={{ variant: 'body2' }}
+          primaryTypographyProps={{ variant: 'body1' }}
           key={bullet}
         >
           {bullet}
@@ -69,7 +69,7 @@ function BulletedList(items) {
     <List sx={{ listStyleType: 'disc' }}>
       {items.map((bullet) => (
         <ListItemText
-          primaryTypographyProps={{ variant: 'body2' }}
+          primaryTypographyProps={{ variant: 'body1' }}
           sx={{ display: 'list-item' }}
           key={bullet}
         >
