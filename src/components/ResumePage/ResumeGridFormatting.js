@@ -34,7 +34,7 @@ function ResumeCompanyHeading({ children }) {
 function ResumeLeftGridBody({ children }) {
   return (
     <Grid item xs={6}>
-      <Typography variant='body2' align='right'>
+      <Typography variant='body1' align='right'>
         {children}
       </Typography>
     </Grid>
@@ -44,7 +44,7 @@ function ResumeLeftGridBody({ children }) {
 function ResumeRightGridBody({ children }) {
   return (
     <Grid item xs={6}>
-      <Typography variant='body2' align='left'>
+      <Typography variant='body1' align='left'>
         {children}
       </Typography>
     </Grid>
