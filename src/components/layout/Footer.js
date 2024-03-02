@@ -18,7 +18,7 @@ const links = [
 export default function Footer() {
   return (
     <footer>
-      <Grid container>
+      <Grid container sx={{ pb: 2 }}>
         <Grid item xs={3} />
         <Grid item xs={9}>
           <Box sx={{ display: 'flex', justifyContent: 'end' }}>
