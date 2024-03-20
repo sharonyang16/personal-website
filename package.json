@@ -1,6 +1,7 @@
 {
-  "name": "material-ui-gatsby",
+  "name": "sharon-yang-personal-website",
   "version": "5.0.0",
+  "homepage": "https://sharonyang16.github.io/",
   "private": true,
   "browserslist": [
     ">0.25%",
@@ -16,6 +17,7 @@
     "gatsby": "latest",
     "gatsby-plugin-react-helmet": "latest",
     "gatsby-plugin-react-svg": "^3.3.0",
+    "gh-pages": "^6.1.1",
     "json5": "^2.2.3",
     "loader-utils": "^3.2.1",
     "react": "latest",
@@ -27,7 +29,9 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
