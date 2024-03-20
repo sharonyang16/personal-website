@@ -19,7 +19,7 @@ jobs:
           node-version: 18
 
       - name: Install Modules
-        run: npm ci
+        run: yarn install
 
       - name: Run Linting Check
-        run: npm run lint
+        run: yarn lint
