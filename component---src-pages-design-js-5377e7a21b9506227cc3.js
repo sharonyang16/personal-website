@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmaterial_ui_gatsby=self.webpackChunkmaterial_ui_gatsby||[]).push([[949],{2318:function(t,e,n){n.d(e,{A:function(){return i}});var r=n(6540),a=n(6454);function i(t){return r.createElement(r.Fragment,null,r.createElement(a.A,{variant:"h1",align:"left",fontWeight:"bold",color:"text.primary"},t.title))}},2981:function(t,e,n){n.r(e),n.d(e,{default:function(){return i}});var r=n(6540),a=n(2318);function i(){return r.createElement(a.A,{title:"Design"})}}}]);
-//# sourceMappingURL=component---src-pages-design-js-5377e7a21b9506227cc3.js.map
