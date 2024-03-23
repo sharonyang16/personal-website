@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Typography } from '@mui/material';
 
 interface PageHeadingProps {
-  title: String;
+  title: string;
 }
 
 export default function PageHeading(props: PageHeadingProps) {

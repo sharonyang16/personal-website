@@ -45,14 +45,14 @@ const CAMDITDescriptionBullets = [
   'Addressed questions and concerns from CAMD students, faculty, and staff regarding equipment and software managed by the department and other technologies managed at a university level.',
 ];
 
-function ToolsList(items: String[]) {
+function ToolsList(items: string[]) {
   return (
     <List>
       <Typography variant='body1' fontWeight='bold'>
         Associated Tools/Skills
       </Typography>
 
-      {items.map((bullet: String) => (
+      {items.map((bullet: string) => (
         <ListItemText primaryTypographyProps={{ variant: 'body1' }}>
           {bullet}
         </ListItemText>
@@ -61,10 +61,10 @@ function ToolsList(items: String[]) {
   );
 }
 
-function BulletedList(items: String[]) {
+function BulletedList(items: string[]) {
   return (
     <List sx={{ listStyleType: 'disc' }}>
-      {items.map((bullet: String) => (
+      {items.map((bullet: string) => (
         <ListItemText
           primaryTypographyProps={{ variant: 'body1' }}
           sx={{ display: 'list-item' }}
