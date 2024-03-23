@@ -3,6 +3,7 @@ import PageHeading from '../components/PageHeading';
 import BoldItalics from '../components/BoldItalics';
 import { Typography, Button, Box, Divider } from '@mui/material';
 import { navigate } from 'gatsby';
+import ComingSoon from '../components/ComingSoon';
 export default function IndexPage() {
   return (
     <>
@@ -24,6 +25,7 @@ export default function IndexPage() {
         </Button>
       </Box>
       <Divider />
+      <ComingSoon />
     </>
   );
 }
