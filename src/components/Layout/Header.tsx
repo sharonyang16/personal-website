@@ -3,7 +3,12 @@ import { Grid, SvgIcon, Typography } from '@mui/material';
 import { Link } from 'gatsby-link';
 import Logo from '../../assets/Logo.svg';
 
-const links = [
+interface LinkProps {
+  name: string;
+  link: string;
+}
+
+const links: LinkProps[] = [
   {
     name: 'about',
     link: '/about',
@@ -50,11 +55,11 @@ export default function Header() {
           }}
         >
           <nav>
-            {links.map((linkData) => (
+            {links.map((linkData: LinkProps) => (
               <Link
                 to={linkData.link}
                 style={{ textDecoration: 'none' }}
-                key={linkData.url}
+                key={linkData.name}
               >
                 <Typography
                   variant='h5'
