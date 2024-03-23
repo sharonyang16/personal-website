@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Grid, Typography } from '@mui/material';
 
-function ResumeGridMainContainer({ children }) {
+function ResumeGridMainContainer({ children }: { children: React.ReactNode }) {
   return (
     <Grid container spacing={2} sx={{ py: 5 }}>
       {children}
@@ -9,7 +9,7 @@ function ResumeGridMainContainer({ children }) {
   );
 }
 
-function ResumeGridRow({ children }) {
+function ResumeGridRow({ children }: { children: React.ReactNode }) {
   return (
     <Grid container item spacing={8}>
       {children}
@@ -17,21 +17,21 @@ function ResumeGridRow({ children }) {
   );
 }
 
-function ResumeSectionHeading({ children }) {
+function ResumeSectionHeading({ children }: { children: React.ReactNode }) {
   return (
     <Grid item xs={6}>
       <Typography variant='h4'> {children} </Typography>
     </Grid>
   );
 }
-function ResumeCompanyHeading({ children }) {
+function ResumeCompanyHeading({ children }: { children: React.ReactNode }) {
   return (
     <Grid item xs={6}>
       <Typography variant='h5'> {children} </Typography>
     </Grid>
   );
 }
-function ResumeLeftGridBody({ children }) {
+function ResumeLeftGridBody({ children }: { children: React.ReactNode }) {
   return (
     <Grid item xs={6}>
       <Typography variant='body1' align='right'>
@@ -41,7 +41,7 @@ function ResumeLeftGridBody({ children }) {
   );
 }
 
-function ResumeRightGridBody({ children }) {
+function ResumeRightGridBody({ children }: { children: React.ReactNode }) {
   return (
     <Grid item xs={6}>
       <Typography variant='body1' align='left'>

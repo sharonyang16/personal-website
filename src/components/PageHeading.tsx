@@ -1,7 +1,11 @@
 import * as React from 'react';
 import { Typography } from '@mui/material';
 
-export default function PageHeading(props) {
+interface PageHeadingProps {
+  title: String;
+}
+
+export default function PageHeading(props: PageHeadingProps) {
   return (
     <>
       <Typography

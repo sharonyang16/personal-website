@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Grid } from '@mui/material';
+import Grid from '@mui/material/Grid';
 
-export default function Main({ children }) {
+export default function Main({ children }: { children: React.ReactNode }) {
   return (
     <main>
       <Grid container spacing={2}>

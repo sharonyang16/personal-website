@@ -22,7 +22,7 @@ export default function ResumePage() {
           href={`https://drive.google.com/uc?export=download&id=${GOOGLE_DRIVE_ID}`}
           variant='contained'
           size='large'
-          endIcon={<DownloadIcon fontSize='1.5rem' />}
+          endIcon={<DownloadIcon />}
         >
           download
         </Button>
