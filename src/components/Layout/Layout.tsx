@@ -14,9 +14,7 @@ export default function Layout({
   return (
     <>
       <Header />
-
       <Main path={path}>{children}</Main>
-
       <Footer />
     </>
   );
