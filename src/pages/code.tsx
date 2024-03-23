@@ -1,6 +1,7 @@
 import * as React from 'react';
 import PageHeading from '../components/PageHeading';
 import { Typography, Divider } from '@mui/material';
+import ComingSoon from '../components/ComingSoon';
 
 export default function CodePage() {
   return (
@@ -12,6 +13,7 @@ export default function CodePage() {
         }
       </Typography>
       <Divider />
+      <ComingSoon />
     </>
   );
 }
