@@ -5,8 +5,7 @@ import PageHeading from '../components/PageHeading';
 import ResumeSkillsSection from '../components/ResumePage/ResumeSkillsSection';
 import ResumeEducationSection from '../components/ResumePage/ResumeEducationSection';
 import ResumeExperiencesSection from '../components/ResumePage/ResumeExperiencesSection';
-
-const GOOGLE_DRIVE_ID = '1-cVdFp3Avcyp9dnqoPlh3LC8ncg4uxal';
+import { RESUME_GOOGLE_DRIVE_ID } from '../data/Pages/ResumePageData';
 
 export default function ResumePage() {
   return (
@@ -19,7 +18,7 @@ export default function ResumePage() {
 
       <Box sx={{ display: 'flex', justifyContent: 'center', py: '2rem' }}>
         <Button
-          href={`https://drive.google.com/uc?export=download&id=${GOOGLE_DRIVE_ID}`}
+          href={`https://drive.google.com/uc?export=download&id=${RESUME_GOOGLE_DRIVE_ID}`}
           variant='contained'
           size='large'
           endIcon={<DownloadIcon />}
