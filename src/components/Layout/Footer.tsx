@@ -4,7 +4,12 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Copyright from './Copyright';
 
-const links = [
+interface FooterLink {
+  icon: any;
+  url: string;
+}
+
+const links: FooterLink[] = [
   {
     icon: <LinkedInIcon />,
     url: 'https://www.linkedin.com/in/sharonyang16/',

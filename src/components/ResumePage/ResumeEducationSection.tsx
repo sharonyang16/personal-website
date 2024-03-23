@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { format } from 'date-fns';
 import {
   ResumeCompanyHeading,
   ResumeGridMainContainer,
@@ -7,6 +8,7 @@ import {
   ResumeRightGridBody,
   ResumeSectionHeading,
 } from './ResumeGridFormatting';
+import { education } from '../../data/Resume/ResumeEducationData';
 
 export default function ResumeEducationSection() {
   return (
@@ -17,25 +19,22 @@ export default function ResumeEducationSection() {
       </ResumeGridRow>
 
       <ResumeGridRow>
-        <ResumeLeftGridBody>Boston, MA</ResumeLeftGridBody>
-        <ResumeCompanyHeading>Northeastern University</ResumeCompanyHeading>
+        <ResumeLeftGridBody>{education.location}</ResumeLeftGridBody>
+        <ResumeCompanyHeading>{education.name}</ResumeCompanyHeading>
       </ResumeGridRow>
 
       <ResumeGridRow>
-        <ResumeLeftGridBody>September 2021 - May 2026</ResumeLeftGridBody>
-        <ResumeRightGridBody>
-          B.S. Computer Science and Design
-        </ResumeRightGridBody>
+        <ResumeLeftGridBody>
+          {format(education.startDate, 'MMMM yyyy')} -{' '}
+          {format(education.endDate, 'MMMM yyyy')}
+        </ResumeLeftGridBody>
+        <ResumeRightGridBody>{education.major}</ResumeRightGridBody>
       </ResumeGridRow>
 
       <ResumeGridRow>
-        <ResumeLeftGridBody>GPA: 3.86/4.0</ResumeLeftGridBody>
+        <ResumeLeftGridBody>GPA: {education.gpa}/4.0</ResumeLeftGridBody>
         <ResumeRightGridBody>
-          <strong>Relevant Coursework</strong>: Human Computer Interaction |
-          Object-Oriented Design | Algorithms and Data | Networks and
-          Distributed Systems | Experience and Interaction | Design: Processes +
-          Practices | Typographic Systems | Computer Systems | Game Programming
-          | Mathematics of Data Models | Theory of Computation | Linear Algebra
+          <strong>Relevant Coursework</strong>: {education.courses.join(' | ')}
         </ResumeRightGridBody>
       </ResumeGridRow>
     </ResumeGridMainContainer>

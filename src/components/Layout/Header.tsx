@@ -2,30 +2,7 @@ import * as React from 'react';
 import { Grid, SvgIcon, Typography } from '@mui/material';
 import { Link } from 'gatsby-link';
 import Logo from '../../assets/Logo.svg';
-
-interface LinkProps {
-  name: string;
-  link: string;
-}
-
-const links: LinkProps[] = [
-  {
-    name: 'about',
-    link: '/about',
-  },
-  {
-    name: 'code',
-    link: '/code',
-  },
-  {
-    name: 'design',
-    link: '/design',
-  },
-  {
-    name: 'resume',
-    link: '/resume',
-  },
-];
+import { links } from '../../data/Layout/HeaderData';
 
 export default function Header() {
   return (
@@ -55,11 +32,11 @@ export default function Header() {
           }}
         >
           <nav>
-            {links.map((linkData: LinkProps) => (
+            {links.map((link) => (
               <Link
-                to={linkData.link}
+                to={link.url}
                 style={{ textDecoration: 'none' }}
-                key={linkData.name}
+                key={link.name}
               >
                 <Typography
                   variant='h5'
@@ -69,7 +46,7 @@ export default function Header() {
                   color='text.primary'
                   fontSize='1.75rem'
                 >
-                  {linkData.name}
+                  {link.name}
                 </Typography>
               </Link>
             ))}

@@ -6,6 +6,7 @@ import {
   ResumeRightGridBody,
   ResumeSectionHeading,
 } from './ResumeGridFormatting';
+import { skills } from '../../data/Resume/ResumeSkillsData';
 
 export default function ResumeSkillsSection() {
   return (
@@ -15,26 +16,16 @@ export default function ResumeSkillsSection() {
         <ResumeSectionHeading>SKILLS</ResumeSectionHeading>
       </ResumeGridRow>
 
-      <ResumeGridRow>
-        <ResumeLeftGridBody>Programming Languages</ResumeLeftGridBody>
-        <ResumeRightGridBody>
-          JavaScript/TypeScript | HTML/CSS | Java | Python | C# | C/C++ | SQL
-        </ResumeRightGridBody>
-      </ResumeGridRow>
-
-      <ResumeGridRow>
-        <ResumeLeftGridBody>Frameworks/Libraries</ResumeLeftGridBody>
-        <ResumeRightGridBody>
-          React | Express | Node.js | JUnit | Next.js | Gatsby
-        </ResumeRightGridBody>
-      </ResumeGridRow>
-
-      <ResumeGridRow>
-        <ResumeLeftGridBody>Applications/Tools</ResumeLeftGridBody>
-        <ResumeRightGridBody>
-          Git | Figma | Unity | Illustrator | InDesign
-        </ResumeRightGridBody>
-      </ResumeGridRow>
+      {skills.map((skillSection) => {
+        return (
+          <ResumeGridRow>
+            <ResumeLeftGridBody>{skillSection.category}</ResumeLeftGridBody>
+            <ResumeRightGridBody>
+              {skillSection.tools.join(' | ')}
+            </ResumeRightGridBody>
+          </ResumeGridRow>
+        );
+      })}
     </ResumeGridMainContainer>
   );
 }

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { AnimatePresence } from 'framer-motion';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
