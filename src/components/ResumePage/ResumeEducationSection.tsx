@@ -12,7 +12,7 @@ export default function ResumeEducationSection() {
   return (
     <ResumeGridMainContainer>
       <ResumeGridRow>
-        <ResumeLeftGridBody />
+        <ResumeLeftGridBody children={<></>} />
         <ResumeSectionHeading>EDUCATION</ResumeSectionHeading>
       </ResumeGridRow>
 

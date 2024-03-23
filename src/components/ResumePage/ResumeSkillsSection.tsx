@@ -11,7 +11,7 @@ export default function ResumeSkillsSection() {
   return (
     <ResumeGridMainContainer>
       <ResumeGridRow>
-        <ResumeLeftGridBody />
+        <ResumeLeftGridBody children={<></>} />
         <ResumeSectionHeading>SKILLS</ResumeSectionHeading>
       </ResumeGridRow>
 

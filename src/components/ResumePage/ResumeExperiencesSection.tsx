@@ -45,18 +45,15 @@ const CAMDITDescriptionBullets = [
   'Addressed questions and concerns from CAMD students, faculty, and staff regarding equipment and software managed by the department and other technologies managed at a university level.',
 ];
 
-function ToolsList(items) {
+function ToolsList(items: String[]) {
   return (
     <List>
       <Typography variant='body1' fontWeight='bold'>
         Associated Tools/Skills
       </Typography>
 
-      {items.map((bullet) => (
-        <ListItemText
-          primaryTypographyProps={{ variant: 'body1' }}
-          key={bullet}
-        >
+      {items.map((bullet: String) => (
+        <ListItemText primaryTypographyProps={{ variant: 'body1' }}>
           {bullet}
         </ListItemText>
       ))}
@@ -64,14 +61,13 @@ function ToolsList(items) {
   );
 }
 
-function BulletedList(items) {
+function BulletedList(items: String[]) {
   return (
     <List sx={{ listStyleType: 'disc' }}>
-      {items.map((bullet) => (
+      {items.map((bullet: String) => (
         <ListItemText
           primaryTypographyProps={{ variant: 'body1' }}
           sx={{ display: 'list-item' }}
-          key={bullet}
         >
           {bullet}
         </ListItemText>
@@ -84,7 +80,7 @@ export default function ResumeExperiencesSection() {
   return (
     <ResumeGridMainContainer>
       <ResumeGridRow>
-        <ResumeLeftGridBody />
+        <ResumeLeftGridBody children={<></>} />
         <ResumeSectionHeading>RELEVANT EXPERIENCE</ResumeSectionHeading>
       </ResumeGridRow>
 

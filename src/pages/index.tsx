@@ -2,14 +2,13 @@ import * as React from 'react';
 import PageHeading from '../components/PageHeading';
 import BoldItalics from '../components/BoldItalics';
 import { Typography, Button, Box, Divider } from '@mui/material';
-import ShortcutIcon from '@mui/icons-material/Shortcut';
 import { navigate } from 'gatsby';
 export default function IndexPage() {
   return (
     <>
       <PageHeading title="Hi, I'm Sharon!" />
       <Typography variant='subtitle1'>
-        I’m a <BoldItalics>Computer Science + Design</BoldItalics> student at{' '}
+        I'm a <BoldItalics>Computer Science + Design</BoldItalics> student at{' '}
         <BoldItalics>Northeastern University</BoldItalics> with an interest in{' '}
         <BoldItalics>Web Development</BoldItalics> and{' '}
         <BoldItalics>UI/UX Design</BoldItalics>.
@@ -19,7 +18,6 @@ export default function IndexPage() {
         <Button
           variant='contained'
           size='large'
-          endIcon={<ShortcutIcon fontSize='1.5rem' />}
           onClick={() => navigate('/about')}
         >
           more about me
