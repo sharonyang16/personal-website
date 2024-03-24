@@ -82,6 +82,9 @@ export default function ProjectCard(project: ProgrammingProjectInformation) {
             {project.projectName}
           </Typography>
           <Typography variant='h6' align='left'>
+            {project.mainTools.join(' | ')}
+          </Typography>
+          <Typography variant='body1' align='left'>
             {date}
           </Typography>
           <Typography variant='body2' align='left'>
