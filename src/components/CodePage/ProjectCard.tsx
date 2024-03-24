@@ -17,7 +17,29 @@ export default function ProjectCard(project: ProgrammingProjectInformation) {
 
   // left side
   function ProjectImage(project: ProgrammingProjectInformation) {
-    return <Grid item xs={6}></Grid>;
+    return (
+      <Grid item xs={6}>
+        <Box
+          sx={{
+            height: '100%',
+            marginBottom: 2,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: theme.palette.secondary.main,
+          }}
+        >
+          {project.googleDriveImageID ? (
+            <img
+              src={`https://drive.google.com/thumbnail?id=${project.googleDriveImageID}&sz=h200`}
+              alt={`Screenshot of ${project.projectName}`}
+            />
+          ) : (
+            <div></div>
+          )}
+        </Box>
+      </Grid>
+    );
   }
 
   // right side
@@ -44,20 +66,31 @@ export default function ProjectCard(project: ProgrammingProjectInformation) {
     };
 
     return (
-      <Grid item xs={6}>
-        <Typography variant='h5' align='left'>
-          {project.projectName}
-        </Typography>
-        <Typography variant='h6' align='left'>
-          {date}
-        </Typography>
-        <Typography variant='body2' align='left'>
-          {project.description}
-        </Typography>
+      <Grid
+        item
+        xs={6}
+        sx={{
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+        }}
+      >
+        <Box>
+          <Typography variant='h5' align='left'>
+            {project.projectName}
+          </Typography>
+          <Typography variant='h6' align='left'>
+            {date}
+          </Typography>
+          <Typography variant='body2' align='left'>
+            {project.description}
+          </Typography>
+        </Box>
+
         <Box
           sx={{
             display: 'flex',
-
             paddingY: 1,
             gap: 1,
           }}
