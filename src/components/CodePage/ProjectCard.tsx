@@ -6,6 +6,7 @@ import {
   Button,
   Tooltip,
   useTheme,
+  alpha,
 } from '@mui/material';
 import { format } from 'date-fns';
 import { GitHub, Web } from '@mui/icons-material';
@@ -26,7 +27,7 @@ export default function ProjectCard(project: ProgrammingProjectInformation) {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundColor: theme.palette.secondary.main,
+            backgroundColor: alpha(theme.palette.secondary.light, 0.75),
           }}
         >
           {project.googleDriveImageID ? (
