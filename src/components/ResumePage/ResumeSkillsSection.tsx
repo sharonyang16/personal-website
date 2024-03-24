@@ -1,7 +1,6 @@
 import * as React from 'react';
+import { GridMainContainer, GridRow } from '../Layout/GridFormatting';
 import {
-  ResumeGridMainContainer,
-  ResumeGridRow,
   ResumeLeftGridBody,
   ResumeRightGridBody,
   ResumeSectionHeading,
@@ -10,22 +9,22 @@ import { skills } from '../../data/Resume/ResumeSkillsData';
 
 export default function ResumeSkillsSection() {
   return (
-    <ResumeGridMainContainer>
-      <ResumeGridRow>
+    <GridMainContainer>
+      <GridRow>
         <ResumeLeftGridBody children={<></>} />
         <ResumeSectionHeading>SKILLS</ResumeSectionHeading>
-      </ResumeGridRow>
+      </GridRow>
 
       {skills.map((skillSection) => {
         return (
-          <ResumeGridRow>
+          <GridRow>
             <ResumeLeftGridBody>{skillSection.category}</ResumeLeftGridBody>
             <ResumeRightGridBody>
               {skillSection.tools.join(' | ')}
             </ResumeRightGridBody>
-          </ResumeGridRow>
+          </GridRow>
         );
       })}
-    </ResumeGridMainContainer>
+    </GridMainContainer>
   );
 }

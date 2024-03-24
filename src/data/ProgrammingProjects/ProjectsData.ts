@@ -1,4 +1,4 @@
-interface ProgrammingProjectInformation {
+export interface ProgrammingProjectInformation {
   projectName: string;
   startDate: Date;
   endDate?: Date;

@@ -1,22 +1,6 @@
 import * as React from 'react';
 import { Grid, Typography } from '@mui/material';
 
-function ResumeGridMainContainer({ children }: { children: React.ReactNode }) {
-  return (
-    <Grid container spacing={2} sx={{ py: 5 }}>
-      {children}
-    </Grid>
-  );
-}
-
-function ResumeGridRow({ children }: { children: React.ReactNode }) {
-  return (
-    <Grid container item spacing={8}>
-      {children}
-    </Grid>
-  );
-}
-
 function ResumeSectionHeading({ children }: { children: React.ReactNode }) {
   return (
     <Grid item xs={6}>
@@ -52,8 +36,6 @@ function ResumeRightGridBody({ children }: { children: React.ReactNode }) {
 }
 
 export {
-  ResumeGridMainContainer,
-  ResumeGridRow,
   ResumeSectionHeading,
   ResumeCompanyHeading,
   ResumeLeftGridBody,

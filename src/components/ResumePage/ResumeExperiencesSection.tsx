@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { List, ListItemText, Typography } from '@mui/material';
 import { format } from 'date-fns';
+import { GridMainContainer, GridRow } from '../Layout/GridFormatting';
 import {
   ResumeCompanyHeading,
-  ResumeGridMainContainer,
-  ResumeGridRow,
   ResumeLeftGridBody,
   ResumeRightGridBody,
   ResumeSectionHeading,
@@ -44,25 +43,25 @@ function BulletedList(items: string[]) {
 
 export default function ResumeExperiencesSection() {
   return (
-    <ResumeGridMainContainer>
-      <ResumeGridRow>
+    <GridMainContainer>
+      <GridRow>
         <ResumeLeftGridBody children={<></>} />
         <ResumeSectionHeading>RELEVANT EXPERIENCE</ResumeSectionHeading>
-      </ResumeGridRow>
+      </GridRow>
 
       {experiences.map((experience) => {
         return (
           <>
-            <ResumeGridRow>
+            <GridRow>
               <ResumeLeftGridBody>{experience.location}</ResumeLeftGridBody>
               <ResumeCompanyHeading>
                 {experience.organization}
               </ResumeCompanyHeading>
-            </ResumeGridRow>
+            </GridRow>
             {experience.roles.map((role) => {
               return (
                 <>
-                  <ResumeGridRow>
+                  <GridRow>
                     <ResumeLeftGridBody>
                       {format(role.startDate, 'MMMM yyyy')} -{' '}
                       {role.endDate
@@ -72,21 +71,21 @@ export default function ResumeExperiencesSection() {
                     <ResumeRightGridBody>
                       <em>{role.title}</em>
                     </ResumeRightGridBody>
-                  </ResumeGridRow>
-                  <ResumeGridRow>
+                  </GridRow>
+                  <GridRow>
                     <ResumeLeftGridBody>
                       {ToolsList(role.toolsAndSkills)}
                     </ResumeLeftGridBody>
                     <ResumeRightGridBody>
                       {BulletedList(role.descriptionBullets)}
                     </ResumeRightGridBody>
-                  </ResumeGridRow>
+                  </GridRow>
                 </>
               );
             })}
           </>
         );
       })}
-    </ResumeGridMainContainer>
+    </GridMainContainer>
   );
 }
