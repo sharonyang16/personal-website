@@ -9,19 +9,7 @@ interface ProgrammingProjectInformation {
   githubLink?: string;
 }
 
-// using this as a blank template to copy and paste into the array below
-const emptyProject: ProgrammingProjectInformation = {
-  projectName: '',
-  startDate: new Date(),
-  endDate: new Date(),
-  mainTools: [],
-  description: '',
-  link: '',
-  googleDriveImageID: '',
-  githubLink: '',
-};
-
-const projects: ProgrammingProjectInformation[] = [
+export const projects: ProgrammingProjectInformation[] = [
   {
     projectName: 'Personal Website (This website!)',
     startDate: new Date(2023, 7),
