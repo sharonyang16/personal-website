@@ -45,6 +45,7 @@ const projects: ProgrammingProjectInformation[] = [
     description:
       'FinishLine is a custom PM dashboard created by the software team at NER. I started contributing to the project when I joined the team in Fall of 2023 and plan to continue contributing to it until I graduate from Northeastern.',
     link: 'https://finishlinebyner.com',
+    googleDriveImageID: '1ozPKW48iiutHvwdqTgSxgZT3jMzVfxGn',
     githubLink: 'https://github.com/Northeastern-Electric-Racing/FinishLine',
   },
   {
@@ -55,6 +56,7 @@ const projects: ProgrammingProjectInformation[] = [
     description:
       "Timbers' Nap is a 3D Platformer created for CS3540: Game Programming at Northeastern University. Working with 3 classmates, we developed this game in a 7 week period during summer of 2023.",
     link: 'https://play.unity.com/mg/other/webgl-builds-349008',
+    googleDriveImageID: '1tbndE_QbFpzIoLXMWj-50GTdMgsZLfXh',
   },
   {
     projectName: 'Vet Finder',
@@ -72,6 +74,7 @@ const projects: ProgrammingProjectInformation[] = [
     mainTools: ['Java', 'JavaSwing', 'JUnit'],
     description:
       'This image processing app was created for CS3500: Object-Oriented Design at Northeastern University. Utilizing pair programming, a peer and I developed a GUI for this app using the MVC design pattern along with creating documentation and tests.',
+    googleDriveImageID: '1tSsiobTV-H4GlnhOWxkfcsGZ3G26iO6J',
     githubLink: 'https://github.com/sharonyang16/image-processing',
   },
   {
