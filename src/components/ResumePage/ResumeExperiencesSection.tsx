@@ -8,7 +8,7 @@ import {
   ResumeRightGridBody,
   ResumeSectionHeading,
 } from './ResumeGridFormatting';
-import { experiences } from '../../data/Resume/ResumeExperiencesData';
+import { experiences } from '../../data/Resume/ResumeData';
 
 function ToolsList(items: string[]) {
   return (
@@ -44,11 +44,6 @@ function BulletedList(items: string[]) {
 export default function ResumeExperiencesSection() {
   return (
     <GridMainContainer>
-      <GridRow>
-        <ResumeLeftGridBody children={<></>} />
-        <ResumeSectionHeading>RELEVANT EXPERIENCE</ResumeSectionHeading>
-      </GridRow>
-
       {experiences.map((experience) => {
         return (
           <>
