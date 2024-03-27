@@ -1,3 +1,89 @@
+/**
+ * Education Data
+ */
+interface EducationInformation {
+  name: string;
+  location: string;
+  major: string;
+  startDate: Date;
+  endDate: Date;
+  gpa: number;
+  courses: string[];
+}
+
+export const education: EducationInformation = {
+  name: 'Northeastern University',
+  location: 'Boston, MA',
+  major: 'B.S. Computer Science and Design',
+  startDate: new Date(2021, 8),
+  endDate: new Date(2026, 4),
+  gpa: 3.86,
+  courses: [
+    'Human Computer Interaction',
+    'Object-Oriented Design',
+    'Algorithms and Data',
+    'Networks and Distributed Systems',
+    'Experience and Interaction ',
+    'Design: Processes + Practices',
+    'Typographic Systems',
+    'Computer Systems',
+    'Game Programming',
+    'Mathematics of Data Models',
+    'Theory of Computation',
+    'Linear Algebra',
+  ],
+};
+
+/**
+ * Skills Data
+ */
+interface SkillInformation {
+  category: string;
+  tools: string[];
+}
+
+export const skills: SkillInformation[] = [
+  {
+    category: 'Programming Languages',
+    tools: [
+      'JavaScript/TypeScript',
+      'HTML/CSS',
+      'Java',
+      ' Python',
+      'C#',
+      'C/C++',
+      'SQL',
+    ],
+  },
+  {
+    category: 'Frameworks/Libraries',
+    tools: [
+      'React',
+      'Material UI',
+      'Express',
+      'Node.js',
+      'JUnit',
+      'Next.js',
+      'Gatsby',
+    ],
+  },
+  {
+    category: 'Applications/Tools',
+    tools: [
+      'Git',
+      'GitHub',
+      'Figma',
+      'Illustrator',
+      'InDesign',
+      'Photoshop',
+      'Unity',
+    ],
+  },
+];
+
+/**
+ * Experiences Data
+ */
 interface RoleInformation {
   title: string;
   startDate: Date;
