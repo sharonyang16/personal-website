@@ -15,7 +15,10 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Sharon Yang",
+  title: {
+    template: "%s | Sharon Yang",
+    default: "Sharon Yang",
+  },
   description: "Sharon Yang's Personal + Portfolio Website",
 };
 
@@ -27,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.className}`}>
       <body
-        className={`$${geist.variable} ${instrumentSerif.variable} antialiased m-auto  min-h-full flex flex-col max-w-[1184px] px-10 bg-white text-black dark:bg-black dark:text-white`}
+        className={`$${geist.variable} ${instrumentSerif.variable} antialiased m-auto min-h-full flex flex-col max-w-[1184px] px-16 bg-white text-black dark:bg-black dark:text-white`}
       >
         <Layout>{children}</Layout>
       </body>
