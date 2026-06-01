@@ -24,7 +24,10 @@ const Experiences = () => {
       </div>
       <div className="flex flex-col gap-8 col-span-2 lg:py-8">
         {experiences.map((experience) => (
-          <ExperienceCard key={experience.id} {...experience} />
+          <ExperienceCard
+            key={experience.company + experience.position}
+            {...experience}
+          />
         ))}
       </div>
     </>

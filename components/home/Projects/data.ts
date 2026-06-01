@@ -1,6 +1,5 @@
 export const highlightedProjects = [
   {
-    id: 1,
     title: "Fake Stack Overflow",
     thumbnail: "/assets/code/fake-stack-overflow-mockup.png",
     links: [
@@ -21,7 +20,6 @@ export const highlightedProjects = [
     ],
   },
   {
-    id: 7,
     title: "Lift Off",
     links: [
       {

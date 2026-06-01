@@ -16,7 +16,7 @@ const ProjectSection = ({
   return (
     <>
       <div className="flex flex-col gap-4 lg:py-8">
-        <Typography id={title.toLowerCase()} intent="subheadding1">
+        <Typography intent="subheadding1">
           {title}
         </Typography>
         {cta}
@@ -24,7 +24,7 @@ const ProjectSection = ({
 
       <div className="flex flex-col gap-16 col-span-2 lg:py-8">
         {projects.map((project) => (
-          <ProjectCard key={project.id} {...project} />
+          <ProjectCard key={project.title} {...project} />
         ))}
       </div>
     </>

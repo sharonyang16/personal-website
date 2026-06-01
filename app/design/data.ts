@@ -1,6 +1,5 @@
 export const designData = [
   {
-    id: 7,
     title: "Lift Off",
     links: [
       {
@@ -13,7 +12,6 @@ export const designData = [
     technologies: ["Mobile", "Figma", "Illustrator", "User Research"],
   },
   {
-    id: 0,
     title: "Oven Buddy",
     links: [
       {
@@ -26,7 +24,6 @@ export const designData = [
     technologies: ["Mobile", "Figma", "User Research"],
   },
   {
-    id: 1,
     title: "Apple Maps Explore",
     links: [
       {
@@ -40,7 +37,6 @@ export const designData = [
     technologies: ["Mobile", "Figma", "User Research"],
   },
   {
-    id: 6,
     title: "Argos Dashboard Revamp",
     thumbnail: "/assets/design/argos-mockups.png",
     description:
@@ -48,29 +44,18 @@ export const designData = [
     technologies: ["Desktop", "Mobile", "Figma", "User Research"],
   },
   {
-    id: 2,
     title: "NUSkillz",
     description:
       "Social media app for developing new skills, focusing on connecting users with like-minded peers.",
     technologies: ["Desktop", "Figma", "User Research"],
   },
   {
-    id: 3,
     title: "FinishLine Guest Mode/Mobile Redesign",
     description:
       "Focused on transforming existing project managmenet dashboard UI to be more useful for passing viewers and more responsive on smaller screens.",
     technologies: ["Mobile", "Figma", "User Research"],
   },
   {
-    id: 4,
-    title: "FinishLine CAD File Review System",
-    description:
-      "New feature to help engineers review each others CAD files easier and within the interal project management dashboard.",
-    technologies: ["Desktop", "Figma", "User Research"],
-  },
-
-  {
-    id: 5,
     title: "FinishLine Home Page Revamp",
     description:
       "Redesigned the home page of the internal project management dashboard to be more useful for members of different roles.",
