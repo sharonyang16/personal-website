@@ -1,39 +1,31 @@
 "use client";
 import { ProjectCardProps } from "@/types/data";
-import { Button, Typography } from "@/components/base";
-import useExpand from "@/hooks/useExpand";
+import { Typography } from "@/components/base";
 import ProjectCard from "./ProjectCard";
+import React from "react";
 
 const ProjectSection = ({
   title,
+  cta,
   projects,
 }: {
   title: string;
+  cta?: React.ReactNode;
   projects: ProjectCardProps[];
 }) => {
-  const { isExpanded, setIsExpanded } = useExpand();
-
   return (
     <>
-      <Typography
-        id={title.toLowerCase()}
-        intent="subheadding1"
-        className="lg:py-8"
-      >
-        {title}
-      </Typography>
+      <div className="flex flex-col gap-4 lg:py-8">
+        <Typography id={title.toLowerCase()} intent="subheadding1">
+          {title}
+        </Typography>
+        {cta}
+      </div>
+
       <div className="flex flex-col gap-16 col-span-2 lg:py-8">
-        {projects.slice(0, isExpanded ? projects.length : 3).map((project) => (
+        {projects.map((project) => (
           <ProjectCard key={project.id} {...project} />
         ))}
-        <Button
-          onClick={() => setIsExpanded(!isExpanded)}
-          variant="secondary"
-          className="self-center"
-          aria-label={`${isExpanded ? "Show less" : "Show more"} ${title.toLowerCase()} projects`}
-        >
-          {isExpanded ? "Show Less" : "Show More"}
-        </Button>
       </div>
     </>
   );
