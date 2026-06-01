@@ -8,7 +8,6 @@ export type ExperienceCardProps = {
 };
 
 export type ProjectCardProps = {
-  id: number;
   title: string;
   links?: Link[];
   thumbnail?: string;

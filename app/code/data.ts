@@ -1,6 +1,5 @@
 export const codeData = [
   {
-    id: 1,
     title: "Fake Stack Overflow",
     thumbnail: "/assets/code/fake-stack-overflow-mockup.png",
     links: [
@@ -21,7 +20,6 @@ export const codeData = [
     ],
   },
   {
-    id: 3,
     title: "Vet Finder",
     links: [
       {
@@ -35,7 +33,6 @@ export const codeData = [
     technologies: ["Next.js", "JavaScript", "Tailwind CSS"],
   },
   {
-    id: 4,
     title: "FinishLine",
     links: [
       {
@@ -53,7 +50,6 @@ export const codeData = [
     technologies: ["React", "TypeScript", "Express.js", "Prisma", "Jest"],
   },
   {
-    id: 5,
     title: "Image Processor",
     links: [
       {
@@ -66,7 +62,6 @@ export const codeData = [
     technologies: ["Java", "JUnit", "Java Swing"],
   },
   {
-    id: 6,
     title: "Typing Game",
     links: [
       {
@@ -90,26 +85,6 @@ export const codeData = [
     ],
   },
   {
-    id: 8,
-    title: "AI Task Tracker",
-    links: [
-      {
-        type: "github",
-        url: "https://github.com/sharonyang16/ai-task-tracker",
-      },
-    ],
-    thumbnail: "/assets/code/task-tracker-mockup.png",
-    description: "Native task tracker with AI recommendations.",
-    technologies: [
-      "React Native",
-      "TypeScript",
-      "FastAPI",
-      "Python",
-      "Supabase",
-    ],
-  },
-  {
-    id: 7,
     title: "Rosy Photobooth",
     links: [
       {
@@ -126,7 +101,6 @@ export const codeData = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
-    id: 2,
     title: "Timbers' Nap",
     links: [
       {
