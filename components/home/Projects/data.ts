@@ -1,4 +1,4 @@
-export const codeData = [
+export const highlightedProjects = [
   {
     id: 1,
     title: "Fake Stack Overflow",
@@ -20,9 +20,6 @@ export const codeData = [
       "Chakra UI",
     ],
   },
-];
-
-export const designData = [
   {
     id: 7,
     title: "Lift Off",
