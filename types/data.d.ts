@@ -1,9 +1,8 @@
 export type ExperienceCardProps = {
-  id: number;
   company: string;
   position: string;
   start: string;
-  end: string;
+  end?: string;
   description: string;
   technologies: string[];
 };
