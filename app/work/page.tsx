@@ -3,7 +3,7 @@ import {
   BrowseGridRow,
 } from "@/components/layout/BrowseGrid/BrowseGrid";
 import { codeData, designData } from "./data";
-import ProjectCard from "@/components/home/Projects/ProjectCard";
+import { ProjectCard } from "@/components/cards/ProjectCard";
 
 export default function Work() {
   return (

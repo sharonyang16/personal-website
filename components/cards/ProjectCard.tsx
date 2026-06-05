@@ -3,7 +3,7 @@ import { Chip, Link, Typography } from "@/components/base";
 import { ProjectCardProps } from "@/types/data";
 import { ProjectLinkIcon, toAriaLabel } from "@/utils/data.utils";
 
-const ProjectCard = ({
+export const ProjectCard = ({
   title,
   links,
   thumbnail,
@@ -54,5 +54,3 @@ const ProjectCard = ({
     </div>
   );
 };
-
-export default ProjectCard;
