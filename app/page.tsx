@@ -19,7 +19,7 @@ export default function Home() {
       <BrowseGridRow
         title="Recent Projects"
         cta={
-          <Link href="/code" aria-label="Code projects ">
+          <Link href="/code" aria-label="All projects page">
             <div className="flex gap-2 items-center">
               <Typography intent="label1">See All</Typography>
               <FaArrowRight />
