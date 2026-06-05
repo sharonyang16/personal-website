@@ -16,9 +16,7 @@ const ProjectSection = ({
   return (
     <>
       <div className="flex flex-col gap-4 lg:py-8">
-        <Typography intent="subheadding1">
-          {title}
-        </Typography>
+        <Typography intent="subheadding1">{title}</Typography>
         {cta}
       </div>
 
