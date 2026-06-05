@@ -1,14 +1,36 @@
+import { Typography } from "@/components/base";
+import Link from "next/link";
 import Hero from "@/components/home/Hero/Hero";
-import Projects from "@/components/home/Projects/Projects";
+import ProjectCard from "@/components/home/Projects/ProjectCard";
+import {
+  BrowseGrid,
+  BrowseGridRow,
+} from "@/components/layout/BrowseGrid/BrowseGrid";
+import { FaArrowRight } from "react-icons/fa";
+import { highlightedProjects } from "./data";
 
 export default function Home() {
   return (
-    <div className="flex flex-col lg:grid lg:grid-cols-3 gap-x-8 gap-y-12 py-4">
+    <BrowseGrid>
       <div className="col-span-2">
         <Hero />
       </div>
-      <div />
-      <Projects />
-    </div>
+      {/* Spacer */ <div />}
+      <BrowseGridRow
+        title="Recent Projects"
+        cta={
+          <Link href="/code" aria-label="Code projects ">
+            <div className="flex gap-2 items-center">
+              <Typography intent="label1">See All</Typography>
+              <FaArrowRight />
+            </div>
+          </Link>
+        }
+      >
+        {highlightedProjects.map((project) => (
+          <ProjectCard key={project.title} {...project} />
+        ))}
+      </BrowseGridRow>
+    </BrowseGrid>
   );
 }
