@@ -5,7 +5,7 @@ import {
 } from "@/components/layout/BrowseGrid/BrowseGrid";
 import { education, experiences, resumeDownloadUrl } from "./data";
 import { MdDownloading } from "react-icons/md";
-import ExperienceCard from "@/components/home/Experiences/ExperienceCard";
+import { ExperienceCard } from "@/app/about/ExperienceCard";
 
 export default function About() {
   return (

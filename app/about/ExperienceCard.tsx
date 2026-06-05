@@ -2,7 +2,7 @@ import { format } from "date-fns";
 import { ExperienceCardProps } from "@/types/data";
 import { Chip, Typography } from "@/components/base";
 
-const ExperienceCard = ({
+export const ExperienceCard = ({
   company,
   position,
   start,
@@ -29,5 +29,3 @@ const ExperienceCard = ({
     </div>
   );
 };
-
-export default ExperienceCard;
