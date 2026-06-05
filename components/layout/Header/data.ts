@@ -1,1 +1,1 @@
-export const nav = ["about", "code", "design"];
+export const nav = ["about", "work"];
