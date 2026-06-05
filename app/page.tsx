@@ -1,7 +1,7 @@
 import { Typography } from "@/components/base";
 import Link from "next/link";
-import Hero from "@/components/home/Hero/Hero";
-import ProjectCard from "@/components/home/Projects/ProjectCard";
+import Hero from "@/components/hero/Hero";
+import { ProjectCard } from "@/components/cards/ProjectCard";
 import {
   BrowseGrid,
   BrowseGridRow,
