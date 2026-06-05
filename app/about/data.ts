@@ -47,18 +47,20 @@ export const experiences: ExperienceCardProps[] = [
   },
 ];
 
-export const education: ExperienceCardProps = {
-  company: "Northeastern University",
-  position: "B.S. Computer Science and Design",
-  start: "2021-09-02",
-  end: "2025-12-02",
-  description:
-    "Graduated Summa Cum Laude. Took courses in Software Engineering, Object-Oriented Design, Algorithms and Data, Networks and Distributed Systems, Human Computer Interaction, and Interaction Design.",
-  technologies: [
-    "Java",
-    "Figma",
-    "TypeScript",
-    "Python",
-    "Test Driven Development",
-  ],
-};
+export const education: ExperienceCardProps[] = [
+  {
+    company: "Northeastern University",
+    position: "B.S. Computer Science and Design",
+    start: "2021-09-02",
+    end: "2025-12-02",
+    description:
+      "Graduated Summa Cum Laude. Took courses in Software Engineering, Object-Oriented Design, Algorithms and Data, Networks and Distributed Systems, Human Computer Interaction, and Interaction Design.",
+    technologies: [
+      "Java",
+      "Figma",
+      "TypeScript",
+      "Python",
+      "Test Driven Development",
+    ],
+  },
+];

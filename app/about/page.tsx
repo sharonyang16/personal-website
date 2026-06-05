@@ -35,7 +35,9 @@ export default function About() {
         ))}
       </BrowseGridRow>
       <BrowseGridRow title="Education">
-        <ExperienceCard {...education} />
+        {education.map((edu) => (
+          <ExperienceCard key={edu.company + edu.position} {...edu} />
+        ))}
       </BrowseGridRow>
     </BrowseGrid>
   );
