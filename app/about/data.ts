@@ -1,5 +1,10 @@
 import { ExperienceCardProps } from "@/types/data";
 
+export const pageTitle = "About me";
+
+export const pageDescription =
+  "I'm a software engineer based in New York. I'm a recent graduate with experience in full stack web development and UI/UX design. Outside of work, I like to go to the gym, draw, and play video games!";
+
 export const resumeDownloadUrl =
   "https://drive.google.com/u/1/uc?id=1AVbzD-4wveiw7NyC0Vo0dk79HmHFgHfI&export=download";
 

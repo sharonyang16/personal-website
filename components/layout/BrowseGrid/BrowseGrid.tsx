@@ -1,4 +1,5 @@
 import { Typography } from "@/components/base";
+import { cn } from "@/components/base";
 
 type BrowseGridRowProps = {
   title: string;
@@ -21,13 +22,18 @@ export const BrowseGridRow = ({ title, cta, children }: BrowseGridRowProps) => {
 type BrowseHeadingProps = {
   title: string;
   description: string;
+  className?: string;
 };
 
-export const BrowseHeading = ({ title, description }: BrowseHeadingProps) => {
+export const BrowseHeading = ({
+  title,
+  description,
+  className,
+}: BrowseHeadingProps) => {
   return (
     <>
-      <div className="col-span-2">
-        <div className="flex flex-col w-full gap-8 py-16">
+      <div className={cn("col-span-2", className)}>
+        <div className="flex flex-col w-full gap-8">
           <div className="flex flex-col gap-2">
             <Typography intent="heading">{title}</Typography>
             <Typography intent="paragraph1">{description}</Typography>
