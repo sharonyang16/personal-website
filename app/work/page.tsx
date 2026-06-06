@@ -5,6 +5,11 @@ import {
 } from "@/components/layout/BrowseGrid/BrowseGrid";
 import { codeData, designData, pageDescription, pageTitle } from "./data";
 import { ProjectCard } from "@/components/cards/ProjectCard";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Work",
+};
 
 export default function Work() {
   return (

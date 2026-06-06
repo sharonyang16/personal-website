@@ -13,6 +13,11 @@ import {
 } from "./data";
 import { MdDownloading } from "react-icons/md";
 import { ExperienceCard } from "@/components/cards/ExperienceCard";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 export default function About() {
   return (
