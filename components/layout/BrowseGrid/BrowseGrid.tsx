@@ -1,5 +1,4 @@
 import { Typography } from "@/components/base";
-import { cn } from "@/components/base";
 
 type BrowseGridRowProps = {
   title: string;
