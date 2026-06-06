@@ -12,7 +12,7 @@ import { headline, highlightedProjects, summary } from "./data";
 export default function Home() {
   return (
     <BrowseGrid>
-      <BrowseHeading title={headline} description={summary} className="py-16" />
+      <BrowseHeading title={headline} description={summary} isHomePage={true} />
       <BrowseGridRow
         title="Recent Projects"
         cta={

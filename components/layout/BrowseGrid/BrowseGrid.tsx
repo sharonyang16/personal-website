@@ -23,19 +23,22 @@ type BrowseHeadingProps = {
   title: string;
   description: string;
   className?: string;
+  isHomePage?: boolean;
 };
 
 export const BrowseHeading = ({
   title,
   description,
-  className,
+  isHomePage = false,
 }: BrowseHeadingProps) => {
   return (
     <>
-      <div className={cn("col-span-2", className)}>
+      <div className={`col-span-2 ${isHomePage && "py-16"}`}>
         <div className="flex flex-col w-full gap-8">
           <div className="flex flex-col gap-2">
-            <Typography intent="heading">{title}</Typography>
+            <Typography intent={isHomePage ? "heading1" : "heading2"}>
+              {title}
+            </Typography>
             <Typography intent="paragraph1">{description}</Typography>
           </div>
         </div>
