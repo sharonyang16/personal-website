@@ -1,21 +1,18 @@
 import { Typography } from "@/components/base";
 import Link from "next/link";
-import Hero from "@/components/hero/Hero";
 import { ProjectCard } from "@/components/cards/ProjectCard";
 import {
   BrowseGrid,
   BrowseGridRow,
+  BrowseHeading,
 } from "@/components/layout/BrowseGrid/BrowseGrid";
 import { FaArrowRight } from "react-icons/fa";
-import { highlightedProjects } from "./data";
+import { headline, highlightedProjects, summary } from "./data";
 
 export default function Home() {
   return (
     <BrowseGrid>
-      <div className="col-span-2">
-        <Hero />
-      </div>
-      {/* Spacer */ <div />}
+      <BrowseHeading title={headline} description={summary} />
       <BrowseGridRow
         title="Recent Projects"
         cta={
