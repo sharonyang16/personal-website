@@ -1,3 +1,8 @@
+export const headline = "Hi, I'm Sharon.";
+
+export const summary =
+  "I am a software engineer who's passionate about creating beautiful, user-friendly applications.";
+
 export const highlightedProjects = [
   {
     title: "Fake Stack Overflow",

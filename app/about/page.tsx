@@ -2,14 +2,27 @@ import { Link, Typography } from "@/components/base";
 import {
   BrowseGrid,
   BrowseGridRow,
+  BrowseHeading,
 } from "@/components/layout/BrowseGrid/BrowseGrid";
-import { education, experiences, resumeDownloadUrl } from "./data";
+import {
+  education,
+  experiences,
+  pageDescription,
+  pageTitle,
+  resumeDownloadUrl,
+} from "./data";
 import { MdDownloading } from "react-icons/md";
 import { ExperienceCard } from "@/components/cards/ExperienceCard";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 export default function About() {
   return (
     <BrowseGrid>
+      <BrowseHeading title={pageTitle} description={pageDescription} />
       <BrowseGridRow
         title="Experience"
         cta={
