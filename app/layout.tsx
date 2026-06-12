@@ -3,6 +3,7 @@ import { Geist, Instrument_Serif } from "next/font/google";
 import Layout from "@/components/layout/Layout";
 import "@/styles/globals.css";
 import { DrawerProvider } from "@/contexts/DrawerContext";
+import NavDrawer from "@/components/layout/Header/NavDrawer";
 
 const geist = Geist({
   variable: "--font-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
         className={`$${geist.variable} ${instrumentSerif.variable} antialiased m-auto min-h-full flex flex-col max-w-[1184px] px-4 lg:px-16 bg-white text-black dark:bg-black dark:text-white`}
       >
         <DrawerProvider>
+          <NavDrawer />
           <Layout>{children}</Layout>
         </DrawerProvider>
       </body>

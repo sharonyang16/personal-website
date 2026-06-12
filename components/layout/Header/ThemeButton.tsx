@@ -10,6 +10,7 @@ const ThemeButton = () => {
       aria-label="Toggle theme"
       variant="secondary"
       onClick={() => toggleTheme()}
+      className="w-fit"
     >
       {theme === "dark" ? <FiSun /> : <FaRegMoon />}
     </Button>
