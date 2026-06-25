@@ -19,17 +19,19 @@ const linkVariants = cva(" ", {
 
 export interface LinkProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
-    VariantProps<typeof linkVariants> {}
+    VariantProps<typeof linkVariants> {
+  as?: React.ElementType;
+}
 
 const Link = React.forwardRef<HTMLElement, LinkProps>(
-  ({ variant, className, ...props }, ref) => {
+  ({ variant, className, as: Comp = "a", ...props }, ref) => {
     const componentProps = {
       className: cn(linkVariants({ variant, className })),
       ...props,
       ref,
     };
 
-    return React.createElement("a", componentProps);
+    return React.createElement(Comp, componentProps);
   },
 );
 

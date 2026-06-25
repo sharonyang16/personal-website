@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Chip, Link, Typography } from "@/components/base";
 import { ProjectCardProps } from "@/types/data";
 import { ProjectLinkIcon, toAriaLabel } from "@/utils/data.utils";
+import { FaReadme } from "react-icons/fa";
+import NextLink from "next/link";
 
 export const ProjectCard = ({
   title,
@@ -28,6 +30,18 @@ export const ProjectCard = ({
         <div className="flex justify-between items-end min-h-10">
           <Typography intent="subheadding2">{title}</Typography>
           <div className="flex gap-2">
+            <Link
+              href={`/work/${title
+                .toLowerCase()
+                .replaceAll(/[^\w ]/g, "")
+                .replaceAll(/\s+/g, "-")}`}
+              variant="buttonSecondary"
+              className="rounded-full flex items-center justify-center"
+              as={NextLink}
+            >
+              <FaReadme />
+            </Link>
+
             {links?.map((link) => (
               <Link
                 key={`${title}-${link.type}`}
