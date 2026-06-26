@@ -1,12 +1,12 @@
-import { getAllPosts } from "@/utils/posts";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import matter from "gray-matter";
-import fs from "fs";
-import path from "path";
-import Image from "next/image";
-import { Chip, Link, Typography } from "@/components/base";
-import { ProjectLinkIcon, toAriaLabel } from "@/utils/data.utils";
-import { ReactNode } from "react";
+import { getAllPosts } from '@/utils/posts';
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import matter from 'gray-matter';
+import fs from 'fs';
+import path from 'path';
+import Image from 'next/image';
+import { Chip, Link, Typography } from '@/components/base';
+import { ProjectLinkIcon, toAriaLabel } from '@/utils/data.utils';
+import { ReactNode } from 'react';
 
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -43,8 +43,8 @@ export default async function PostPage({
 }) {
   const { slug } = await params;
   const raw = fs.readFileSync(
-    path.join(process.cwd(), "content/posts", `${slug}.mdx`),
-    "utf8",
+    path.join(process.cwd(), 'content/posts', `${slug}.mdx`),
+    'utf8'
   );
   const { data: meta, content } = matter(raw);
 

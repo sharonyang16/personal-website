@@ -1,13 +1,13 @@
-import { Typography } from "@/components/base";
-import Link from "next/link";
-import { ProjectCard } from "@/components/cards/ProjectCard";
+import { Typography } from '@/components/base';
+import Link from 'next/link';
+import { ProjectCard } from '@/components/cards/ProjectCard';
 import {
   BrowseGrid,
   BrowseGridRow,
   BrowseHeading,
-} from "@/components/layout/BrowseGrid/BrowseGrid";
-import { FaArrowRight } from "react-icons/fa";
-import { headline, highlightedProjects, summary } from "./data";
+} from '@/components/layout/BrowseGrid/BrowseGrid';
+import { FaArrowRight } from 'react-icons/fa';
+import { headline, highlightedProjects, summary } from './data';
 
 export default function Home() {
   return (

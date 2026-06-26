@@ -1,4 +1,4 @@
-import { Typography } from "@/components/base";
+import { Typography } from '@/components/base';
 
 type BrowseGridRowProps = {
   title: string;
@@ -32,10 +32,10 @@ export const BrowseHeading = ({
 }: BrowseHeadingProps) => {
   return (
     <>
-      <div className={`col-span-2 ${isHomePage && "py-16"}`}>
+      <div className={`col-span-2 ${isHomePage && 'py-16'}`}>
         <div className="flex flex-col w-full gap-8">
           <div className="flex flex-col gap-2">
-            <Typography intent={isHomePage ? "heading1" : "heading2"}>
+            <Typography intent={isHomePage ? 'heading1' : 'heading2'}>
               {title}
             </Typography>
             <Typography intent="paragraph1">{description}</Typography>

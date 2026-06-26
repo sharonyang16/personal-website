@@ -1,7 +1,7 @@
-import { FaRegMoon } from "react-icons/fa";
-import { FiSun } from "react-icons/fi";
-import { Button } from "@/components/base";
-import { useTheme } from "@/hooks/useTheme";
+import { FaRegMoon } from 'react-icons/fa';
+import { FiSun } from 'react-icons/fi';
+import { Button } from '@/components/base';
+import { useTheme } from '@/hooks/useTheme';
 
 const ThemeButton = () => {
   const { theme, toggleTheme } = useTheme();
@@ -12,7 +12,7 @@ const ThemeButton = () => {
       onClick={() => toggleTheme()}
       className="w-fit"
     >
-      {theme === "dark" ? <FiSun /> : <FaRegMoon />}
+      {theme === 'dark' ? <FiSun /> : <FaRegMoon />}
     </Button>
   );
 };

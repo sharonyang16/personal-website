@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useDrawer } from "@/contexts/DrawerContext";
-import Link from "next/link";
-import Logo from "./Logo";
-import { Typography } from "@/components/base";
-import { nav } from "./data";
-import ThemeButton from "./ThemeButton";
+import { useDrawer } from '@/contexts/DrawerContext';
+import Link from 'next/link';
+import Logo from './Logo';
+import { Typography } from '@/components/base';
+import { nav } from './data';
+import ThemeButton from './ThemeButton';
 
 const NavDrawer = () => {
   const { open, toggle } = useDrawer();
@@ -22,7 +22,7 @@ const NavDrawer = () => {
       <aside
         className={`fixed top-0 left-0 z-101 h-full w-64 py-12 px-8 bg-white dark:bg-neutral-900 shadow-xl
           transform transition-transform duration-300 ease-in-out
-          ${open ? "translate-x-0" : "-translate-x-full"}`}
+          ${open ? 'translate-x-0' : '-translate-x-full'}`}
         aria-label="Sidebar navigation"
       >
         <div className="flex flex-col justify-between h-full">
@@ -34,7 +34,7 @@ const NavDrawer = () => {
             <div className="flex flex-col gap-4">
               {nav.map((link: string) => (
                 <Link key={link} href={`/${link}`} onClick={toggle}>
-                  <Typography intent={"label1"}>{link}</Typography>
+                  <Typography intent={'label1'}>{link}</Typography>
                 </Link>
               ))}
             </div>

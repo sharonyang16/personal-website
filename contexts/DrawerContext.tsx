@@ -1,11 +1,11 @@
-"use client";
+'use client';
 import {
   createContext,
   useContext,
   useState,
   ReactNode,
   useEffect,
-} from "react";
+} from 'react';
 
 type DrawerContextType = {
   open: boolean;
@@ -18,9 +18,9 @@ export function DrawerProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
+    document.body.style.overflow = isOpen ? 'hidden' : '';
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     };
   }, [isOpen]);
 
@@ -38,6 +38,6 @@ export function DrawerProvider({ children }: { children: ReactNode }) {
 
 export function useDrawer() {
   const ctx = useContext(DrawerContext);
-  if (!ctx) throw new Error("useDrawer must be used inside DrawerProvider");
+  if (!ctx) throw new Error('useDrawer must be used inside DrawerProvider');
   return ctx;
 }
