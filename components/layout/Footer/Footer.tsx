@@ -1,6 +1,6 @@
-"use client";
-import { Link, Typography } from "@/components/base";
-import { links } from "./data";
+'use client';
+import { Link, Typography } from '@/components/base';
+import { links } from './data';
 
 const Footer = () => {
   return (

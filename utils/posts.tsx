@@ -1,16 +1,16 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import type { ProjectCardProps } from "@/types/data";
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import type { ProjectCardProps } from '@/types/data';
 
-const postsDir = path.join(process.cwd(), "content/posts");
+const postsDir = path.join(process.cwd(), 'content/posts');
 
 export type PostMeta = {
   slug: string;
   title: string;
   headline: string;
   cover_image?: string;
-  category: "code" | "design";
+  category: 'code' | 'design';
   role: string;
   team: string[];
   stack: string[];
@@ -18,7 +18,7 @@ export type PostMeta = {
 };
 
 export const getPostBySlug = (slug: string) => {
-  const raw = fs.readFileSync(path.join(postsDir, `${slug}.mdx`), "utf8");
+  const raw = fs.readFileSync(path.join(postsDir, `${slug}.mdx`), 'utf8');
   const { data, content } = matter(raw);
   return { meta: data, content };
 };
@@ -26,11 +26,11 @@ export const getPostBySlug = (slug: string) => {
 export const getAllPosts = (): PostMeta[] => {
   return fs
     .readdirSync(postsDir)
-    .filter((f) => f.endsWith(".mdx"))
+    .filter((f) => f.endsWith('.mdx'))
     .map((filename) => {
-      const slug = filename.replace(/\.mdx$/, "");
+      const slug = filename.replace(/\.mdx$/, '');
       const { data } = matter(
-        fs.readFileSync(path.join(postsDir, filename), "utf8"),
+        fs.readFileSync(path.join(postsDir, filename), 'utf8')
       );
       return { slug, ...data } as PostMeta;
     });

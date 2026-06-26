@@ -1,11 +1,11 @@
-"use client";
-import Link from "next/link";
-import { Button, Typography } from "@/components/base";
-import Logo from "./Logo";
-import ThemeButton from "./ThemeButton";
-import { nav } from "./data";
-import { FaBars } from "react-icons/fa";
-import { useDrawer } from "@/contexts/DrawerContext";
+'use client';
+import Link from 'next/link';
+import { Button, Typography } from '@/components/base';
+import Logo from './Logo';
+import ThemeButton from './ThemeButton';
+import { nav } from './data';
+import { FaBars } from 'react-icons/fa';
+import { useDrawer } from '@/contexts/DrawerContext';
 
 const Header = () => {
   const { toggle } = useDrawer();
@@ -20,7 +20,7 @@ const Header = () => {
             <nav className="flex gap-8">
               {nav.map((link: string) => (
                 <Link key={link} href={`/${link}`}>
-                  <Typography intent={"label1"}>{link}</Typography>
+                  <Typography intent={'label1'}>{link}</Typography>
                 </Link>
               ))}
             </nav>

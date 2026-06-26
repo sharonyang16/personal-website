@@ -1,6 +1,6 @@
-import { format } from "date-fns";
-import { ExperienceCardProps } from "@/types/data";
-import { Chip, Typography } from "@/components/base";
+import { format } from 'date-fns';
+import { ExperienceCardProps } from '@/types/data';
+import { Chip, Typography } from '@/components/base';
 
 export const ExperienceCard = ({
   company,
@@ -17,7 +17,7 @@ export const ExperienceCard = ({
         <Typography
           intent="label2"
           className="text-gray-600 dark:text-gray-400"
-        >{`${format(start, "MMM yyyy").toUpperCase()} - ${end ? format(end, "MMM yyyy").toUpperCase() : "PRESENT"}`}</Typography>
+        >{`${format(start, 'MMM yyyy').toUpperCase()} - ${end ? format(end, 'MMM yyyy').toUpperCase() : 'PRESENT'}`}</Typography>
       </div>
 
       <Typography intent="paragraph2">{description}</Typography>

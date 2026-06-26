@@ -1,19 +1,19 @@
-import React from "react";
-import { VariantProps, cva } from "class-variance-authority";
-import { cn } from "../utils";
+import React from 'react';
+import { VariantProps, cva } from 'class-variance-authority';
+import { cn } from '../utils';
 
-const linkVariants = cva(" ", {
+const linkVariants = cva(' ', {
   variants: {
     variant: {
-      primary: "transition-colors text-black dark:text-white ",
+      primary: 'transition-colors text-black dark:text-white ',
       buttonPrimary:
-        "p-2 transition-colors rounded-lg bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-100",
+        'p-2 transition-colors rounded-lg bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-100',
       buttonSecondary:
-        "p-2 transition-colors rounded-lg border-1 border-black dark:border-white hover:bg-gray-100 dark:hover:bg-gray-800",
+        'p-2 transition-colors rounded-lg border-1 border-black dark:border-white hover:bg-gray-100 dark:hover:bg-gray-800',
     },
   },
   defaultVariants: {
-    variant: "buttonPrimary",
+    variant: 'buttonPrimary',
   },
 });
 
@@ -24,7 +24,7 @@ export interface LinkProps
 }
 
 const Link = React.forwardRef<HTMLElement, LinkProps>(
-  ({ variant, className, as: Comp = "a", ...props }, ref) => {
+  ({ variant, className, as: Comp = 'a', ...props }, ref) => {
     const componentProps = {
       className: cn(linkVariants({ variant, className })),
       ...props,
@@ -32,9 +32,9 @@ const Link = React.forwardRef<HTMLElement, LinkProps>(
     };
 
     return React.createElement(Comp, componentProps);
-  },
+  }
 );
 
-Link.displayName = "Link";
+Link.displayName = 'Link';
 
 export default Link;

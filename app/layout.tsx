@@ -1,24 +1,24 @@
-import type { Metadata } from "next";
-import { Geist, Instrument_Serif } from "next/font/google";
-import "@/styles/globals.css";
-import { DrawerProvider } from "@/contexts/DrawerContext";
-import { Layout, NavDrawer } from "@/components/layout";
+import type { Metadata } from 'next';
+import { Geist, Instrument_Serif } from 'next/font/google';
+import '@/styles/globals.css';
+import { DrawerProvider } from '@/contexts/DrawerContext';
+import { Layout, NavDrawer } from '@/components/layout';
 
 const geist = Geist({
-  variable: "--font-sans",
-  subsets: ["latin"],
+  variable: '--font-sans',
+  subsets: ['latin'],
 });
 
 const instrumentSerif = Instrument_Serif({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  weight: "400",
+  variable: '--font-serif',
+  subsets: ['latin'],
+  weight: '400',
 });
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Sharon Yang",
-    default: "Sharon Yang",
+    template: '%s | Sharon Yang',
+    default: 'Sharon Yang',
   },
   description: "Sharon Yang's Personal + Portfolio Website",
 };

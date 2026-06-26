@@ -1,22 +1,22 @@
-import { Link, Typography } from "@/components/base";
+import { Link, Typography } from '@/components/base';
 import {
   BrowseGrid,
   BrowseGridRow,
   BrowseHeading,
-} from "@/components/layout/BrowseGrid/BrowseGrid";
+} from '@/components/layout/BrowseGrid/BrowseGrid';
 import {
   education,
   experiences,
   pageDescription,
   pageTitle,
   resumeDownloadUrl,
-} from "./data";
-import { MdDownloading } from "react-icons/md";
-import { ExperienceCard } from "@/components/cards/ExperienceCard";
-import type { Metadata } from "next";
+} from './data';
+import { MdDownloading } from 'react-icons/md';
+import { ExperienceCard } from '@/components/cards/ExperienceCard';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "About",
+  title: 'About',
 };
 
 export default function About() {

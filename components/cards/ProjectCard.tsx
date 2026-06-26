@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { Chip, Link, Typography } from "@/components/base";
-import { ProjectCardProps } from "@/types/data";
-import { ProjectLinkIcon, toAriaLabel } from "@/utils/data.utils";
-import { FaReadme } from "react-icons/fa";
-import NextLink from "next/link";
+import Image from 'next/image';
+import { Chip, Link, Typography } from '@/components/base';
+import { ProjectCardProps } from '@/types/data';
+import { ProjectLinkIcon, toAriaLabel } from '@/utils/data.utils';
+import { FaReadme } from 'react-icons/fa';
+import NextLink from 'next/link';
 
 export const ProjectCard = ({
   title,
@@ -33,8 +33,8 @@ export const ProjectCard = ({
             <Link
               href={`/work/${title
                 .toLowerCase()
-                .replaceAll(/[^\w ]/g, "")
-                .replaceAll(/\s+/g, "-")}`}
+                .replaceAll(/[^\w ]/g, '')
+                .replaceAll(/\s+/g, '-')}`}
               variant="buttonSecondary"
               className="rounded-full flex items-center justify-center"
               as={NextLink}
