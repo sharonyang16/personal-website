@@ -1,7 +1,6 @@
 import { format } from 'date-fns';
 import { ExperienceCardProps } from '@/types/data';
-import { Typography } from '@/components/base';
-import { Chip } from 'unremarkable-ui';
+import { Chip, Typography } from 'unremarkable-ui';
 
 export const ExperienceCard = ({
   company,
@@ -14,14 +13,14 @@ export const ExperienceCard = ({
   return (
     <div className="flex flex-col gap-2">
       <div className="flex flex-col gap-1">
-        <Typography intent="subheadding2">{`${position} @ ${company}`}</Typography>
+        <Typography variant="h4">{`${position} @ ${company}`}</Typography>
         <Typography
-          intent="label2"
-          className="text-gray-600 dark:text-gray-400"
+          variant="label2"
+          color="secondary"
         >{`${format(start, 'MMM yyyy').toUpperCase()} - ${end ? format(end, 'MMM yyyy').toUpperCase() : 'PRESENT'}`}</Typography>
       </div>
 
-      <Typography intent="paragraph2">{description}</Typography>
+      <Typography variant="body2">{description}</Typography>
       <div className="flex flex-wrap gap-2">
         {technologies.map((name) => (
           <Chip key={name} variant="subtle" size="sm">

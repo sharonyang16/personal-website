@@ -1,6 +1,5 @@
 'use client';
 import NextLink from 'next/link';
-import { Typography } from '@/components/base';
 import Logo from './Logo';
 import ThemeButton from './ThemeButton';
 import { nav } from './data';
@@ -20,8 +19,13 @@ const Header = () => {
           <div className="flex gap-8 items-center">
             <nav className="flex gap-8">
               {nav.map((link: string) => (
-                <Link as={NextLink} key={link} href={`/${link}`}>
-                  <Typography intent={'label1'}>{link}</Typography>
+                <Link
+                  as={NextLink}
+                  key={link}
+                  href={`/${link}`}
+                  className="font-medium"
+                >
+                  {link}
                 </Link>
               ))}
             </nav>

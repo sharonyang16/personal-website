@@ -3,7 +3,6 @@
 import { useDrawer } from '@/contexts/DrawerContext';
 import NextLink from 'next/link';
 import Logo from './Logo';
-import { Typography } from '@/components/base';
 import { nav } from './data';
 import ThemeButton from './ThemeButton';
 import { Link } from 'unremarkable-ui';
@@ -39,8 +38,9 @@ const NavDrawer = () => {
                   key={link}
                   href={`/${link}`}
                   onClick={toggle}
+                  className="font-medium"
                 >
-                  <Typography intent={'label1'}>{link}</Typography>
+                  {link}
                 </Link>
               ))}
             </div>

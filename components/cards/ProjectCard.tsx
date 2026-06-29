@@ -1,10 +1,9 @@
 import Image from 'next/image';
-import { Typography } from '@/components/base';
 import { ProjectCardProps } from '@/types/data';
 import { ProjectLinkIcon, toAriaLabel } from '@/utils/data.utils';
 import { FaReadme } from 'react-icons/fa';
 import NextLink from 'next/link';
-import { Chip, Link } from 'unremarkable-ui';
+import { Chip, Link, Typography } from 'unremarkable-ui';
 
 export const ProjectCard = ({
   title,
@@ -29,7 +28,7 @@ export const ProjectCard = ({
       </div>
       <div className="flex flex-col gap-1 pl-1">
         <div className="flex justify-between items-end min-h-10">
-          <Typography intent="subheadding2">{title}</Typography>
+          <Typography variant="h4">{title}</Typography>
           <div className="flex gap-2">
             <Link
               href={`/work/${title
@@ -59,7 +58,7 @@ export const ProjectCard = ({
           </div>
         </div>
 
-        <Typography intent="paragraph2">{description}</Typography>
+        <Typography variant="body2">{description}</Typography>
       </div>
       <div className="flex flex-wrap gap-2">
         {technologies.map((name) => (

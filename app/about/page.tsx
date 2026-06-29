@@ -1,4 +1,3 @@
-import { Typography } from '@/components/base';
 import {
   BrowseGrid,
   BrowseGridRow,
@@ -14,7 +13,7 @@ import {
 import { MdDownloading } from 'react-icons/md';
 import { ExperienceCard } from '@/components/cards/ExperienceCard';
 import type { Metadata } from 'next';
-import { Link } from 'unremarkable-ui';
+import { Link, Typography } from 'unremarkable-ui';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -34,9 +33,9 @@ export default function About() {
             rel="noopener noreferrer"
             aria-label="Download Sharon's resume"
           >
-            <div className="flex gap-1 items-center">
+            <div className="flex gap-2 items-center">
               <MdDownloading className="text-xl" />
-              <Typography intent="label1">Resume</Typography>
+              <Typography variant="label1">Resume</Typography>
             </div>
           </Link>
         }

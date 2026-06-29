@@ -1,4 +1,3 @@
-import { Typography } from '@/components/base';
 import NextLink from 'next/link';
 import { ProjectCard } from '@/components/cards/ProjectCard';
 import {
@@ -8,7 +7,7 @@ import {
 } from '@/components/layout/BrowseGrid/BrowseGrid';
 import { FaArrowRight } from 'react-icons/fa';
 import { headline, highlightedProjects, summary } from './data';
-import { Link } from 'unremarkable-ui';
+import { Link, Typography } from 'unremarkable-ui';
 
 export default function Home() {
   return (
@@ -19,7 +18,7 @@ export default function Home() {
         cta={
           <Link as={NextLink} href="/work" aria-label="All projects page">
             <div className="flex gap-2 items-center">
-              <Typography intent="label1">See All</Typography>
+              <Typography variant="label1">See All</Typography>
               <FaArrowRight />
             </div>
           </Link>

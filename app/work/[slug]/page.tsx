@@ -4,10 +4,9 @@ import matter from 'gray-matter';
 import fs from 'fs';
 import path from 'path';
 import Image from 'next/image';
-import { Typography } from '@/components/base';
 import { ProjectLinkIcon, toAriaLabel } from '@/utils/data.utils';
 import { ReactNode } from 'react';
-import { Chip, Link } from 'unremarkable-ui';
+import { Chip, Link, Typography } from 'unremarkable-ui';
 
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -15,10 +14,10 @@ export async function generateStaticParams() {
 
 const components = {
   h2: ({ children }: { children: ReactNode }) => (
-    <Typography intent="heading2">{children}</Typography>
+    <Typography variant="h2">{children}</Typography>
   ),
   p: ({ children }: { children: ReactNode }) => (
-    <Typography intent="paragraph1">{children}</Typography>
+    <Typography variant="body1">{children}</Typography>
   ),
   a: ({ children, href }: { children: ReactNode; href: string }) => (
     <Link href={href} target="_blank" rel="noopener noreferrer">
@@ -61,8 +60,8 @@ export default async function PostPage({
         )}
         <div className="flex flex-col gap-8">
           <div className="grid grid-cols-3 gap-4">
-            <Typography intent="subheadding1">{meta.title}</Typography>
-            <Typography intent="label1" className="col-span-2 self-end">
+            <Typography variant="h3">{meta.title}</Typography>
+            <Typography variant="label1" className="col-span-2 self-end">
               {meta.headline}
             </Typography>
             {meta.links && meta.links.length > 0 && (
@@ -84,12 +83,12 @@ export default async function PostPage({
             )}
             <div className="grid grid-cols-2 col-span-2">
               <div className="flex flex-col">
-                <Typography intent="label2">Role</Typography>
-                <Typography intent="paragraph1">{meta.role}</Typography>
+                <Typography variant="label2">Role</Typography>
+                <Typography variant="body1">{meta.role}</Typography>
               </div>
 
               <div className="flex flex-col gap-1">
-                <Typography intent="label2">Stack</Typography>
+                <Typography variant="label2">Stack</Typography>
                 <div className="flex gap-1 flex-wrap">
                   {meta.stack.map((tech: string) => (
                     <Chip
@@ -106,10 +105,10 @@ export default async function PostPage({
 
               {meta.team && meta.team.length > 0 && (
                 <div className="flex flex-col">
-                  <Typography intent="label2">Team</Typography>
+                  <Typography variant="label2">Team</Typography>
                   <div className="flex flex-col">
                     {meta.team.map((member: string) => (
-                      <Typography key={member} intent="paragraph1">
+                      <Typography key={member} variant="body1">
                         {member}
                       </Typography>
                     ))}
