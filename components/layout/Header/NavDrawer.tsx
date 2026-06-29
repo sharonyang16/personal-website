@@ -1,11 +1,12 @@
 'use client';
 
 import { useDrawer } from '@/contexts/DrawerContext';
-import Link from 'next/link';
+import NextLink from 'next/link';
 import Logo from './Logo';
 import { Typography } from '@/components/base';
 import { nav } from './data';
 import ThemeButton from './ThemeButton';
+import { Link } from 'unremarkable-ui';
 
 const NavDrawer = () => {
   const { open, toggle } = useDrawer();
@@ -27,13 +28,18 @@ const NavDrawer = () => {
       >
         <div className="flex flex-col justify-between h-full">
           <nav className="flex flex-col gap-8">
-            <Link href="/" aria-label="home page" onClick={toggle}>
+            <NextLink href="/" aria-label="home page" onClick={toggle}>
               <Logo className="w-12" />
-            </Link>
+            </NextLink>
 
             <div className="flex flex-col gap-4">
               {nav.map((link: string) => (
-                <Link key={link} href={`/${link}`} onClick={toggle}>
+                <Link
+                  as={NextLink}
+                  key={link}
+                  href={`/${link}`}
+                  onClick={toggle}
+                >
                   <Typography intent={'label1'}>{link}</Typography>
                 </Link>
               ))}

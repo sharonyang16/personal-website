@@ -1,6 +1,7 @@
 'use client';
-import { Link, Typography } from '@/components/base';
+import { Typography } from '@/components/base';
 import { links } from './data';
+import { Link } from 'unremarkable-ui';
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
           {links.map((link) => (
             <Link
               key={link.type}
-              variant="primary"
+              variant="plain"
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"

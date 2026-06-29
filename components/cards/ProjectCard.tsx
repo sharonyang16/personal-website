@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import { Link, Typography } from '@/components/base';
+import { Typography } from '@/components/base';
 import { ProjectCardProps } from '@/types/data';
 import { ProjectLinkIcon, toAriaLabel } from '@/utils/data.utils';
 import { FaReadme } from 'react-icons/fa';
 import NextLink from 'next/link';
-import { Chip } from 'unremarkable-ui';
+import { Chip, Link } from 'unremarkable-ui';
 
 export const ProjectCard = ({
   title,
@@ -36,7 +36,7 @@ export const ProjectCard = ({
                 .toLowerCase()
                 .replaceAll(/[^\w ]/g, '')
                 .replaceAll(/\s+/g, '-')}`}
-              variant="buttonSecondary"
+              variant="iconButtonOutline"
               className="rounded-full flex items-center justify-center"
               as={NextLink}
             >
@@ -46,7 +46,7 @@ export const ProjectCard = ({
             {links?.map((link) => (
               <Link
                 key={`${title}-${link.type}`}
-                variant="buttonSecondary"
+                variant="iconButtonOutline"
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"

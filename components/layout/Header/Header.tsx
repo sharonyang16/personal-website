@@ -1,25 +1,26 @@
 'use client';
-import Link from 'next/link';
+import NextLink from 'next/link';
 import { Button, Typography } from '@/components/base';
 import Logo from './Logo';
 import ThemeButton from './ThemeButton';
 import { nav } from './data';
 import { FaBars } from 'react-icons/fa';
 import { useDrawer } from '@/contexts/DrawerContext';
+import { Link } from 'unremarkable-ui';
 
 const Header = () => {
   const { toggle } = useDrawer();
   return (
     <header className="w-full">
       <div className="py-8 hidden lg:flex justify-between items-center ">
-        <Link href="/" aria-label="home page">
+        <NextLink href="/" aria-label="home page">
           <Logo className="w-12" />
-        </Link>
+        </NextLink>
         <div className="">
           <div className="flex gap-8 items-center">
             <nav className="flex gap-8">
               {nav.map((link: string) => (
-                <Link key={link} href={`/${link}`}>
+                <Link as={NextLink} key={link} href={`/${link}`}>
                   <Typography intent={'label1'}>{link}</Typography>
                 </Link>
               ))}

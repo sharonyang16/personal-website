@@ -1,5 +1,5 @@
 import { Typography } from '@/components/base';
-import Link from 'next/link';
+import NextLink from 'next/link';
 import { ProjectCard } from '@/components/cards/ProjectCard';
 import {
   BrowseGrid,
@@ -8,6 +8,7 @@ import {
 } from '@/components/layout/BrowseGrid/BrowseGrid';
 import { FaArrowRight } from 'react-icons/fa';
 import { headline, highlightedProjects, summary } from './data';
+import { Link } from 'unremarkable-ui';
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <BrowseGridRow
         title="Recent Projects"
         cta={
-          <Link href="/work" aria-label="All projects page">
+          <Link as={NextLink} href="/work" aria-label="All projects page">
             <div className="flex gap-2 items-center">
               <Typography intent="label1">See All</Typography>
               <FaArrowRight />

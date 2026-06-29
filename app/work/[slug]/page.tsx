@@ -4,10 +4,10 @@ import matter from 'gray-matter';
 import fs from 'fs';
 import path from 'path';
 import Image from 'next/image';
-import { Link, Typography } from '@/components/base';
+import { Typography } from '@/components/base';
 import { ProjectLinkIcon, toAriaLabel } from '@/utils/data.utils';
 import { ReactNode } from 'react';
-import { Chip } from 'unremarkable-ui';
+import { Chip, Link } from 'unremarkable-ui';
 
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -21,12 +21,7 @@ const components = {
     <Typography intent="paragraph1">{children}</Typography>
   ),
   a: ({ children, href }: { children: ReactNode; href: string }) => (
-    <Link
-      href={href}
-      variant="primary"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <Link href={href} target="_blank" rel="noopener noreferrer">
       {children}
     </Link>
   ),
@@ -75,7 +70,7 @@ export default async function PostPage({
                 {meta.links.map((link: { type: string; url: string }) => (
                   <Link
                     key={`$${link.type}`}
-                    variant="buttonSecondary"
+                    variant="iconButtonOutline"
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
