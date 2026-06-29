@@ -1,3 +1,4 @@
+@import '../node_modules/unremarkable-ui/dist/unremarkable-ui.css';
 @import 'tailwindcss';
 
 @theme {
