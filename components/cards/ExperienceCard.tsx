@@ -1,6 +1,7 @@
 import { format } from 'date-fns';
 import { ExperienceCardProps } from '@/types/data';
-import { Chip, Typography } from '@/components/base';
+import { Typography } from '@/components/base';
+import { Chip } from 'unremarkable-ui';
 
 export const ExperienceCard = ({
   company,
@@ -23,7 +24,9 @@ export const ExperienceCard = ({
       <Typography intent="paragraph2">{description}</Typography>
       <div className="flex flex-wrap gap-2">
         {technologies.map((name) => (
-          <Chip key={name}>{name}</Chip>
+          <Chip key={name} variant="subtle" size="sm">
+            {name}
+          </Chip>
         ))}
       </div>
     </div>

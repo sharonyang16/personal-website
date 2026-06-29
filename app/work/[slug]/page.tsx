@@ -4,9 +4,10 @@ import matter from 'gray-matter';
 import fs from 'fs';
 import path from 'path';
 import Image from 'next/image';
-import { Chip, Link, Typography } from '@/components/base';
+import { Link, Typography } from '@/components/base';
 import { ProjectLinkIcon, toAriaLabel } from '@/utils/data.utils';
 import { ReactNode } from 'react';
+import { Chip } from 'unremarkable-ui';
 
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -96,7 +97,12 @@ export default async function PostPage({
                 <Typography intent="label2">Stack</Typography>
                 <div className="flex gap-1 flex-wrap">
                   {meta.stack.map((tech: string) => (
-                    <Chip key={tech} className="h-fit">
+                    <Chip
+                      variant="subtle"
+                      size="sm"
+                      key={tech}
+                      className="h-fit"
+                    >
                       {tech}
                     </Chip>
                   ))}

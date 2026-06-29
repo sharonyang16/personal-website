@@ -1,9 +1,10 @@
 import Image from 'next/image';
-import { Chip, Link, Typography } from '@/components/base';
+import { Link, Typography } from '@/components/base';
 import { ProjectCardProps } from '@/types/data';
 import { ProjectLinkIcon, toAriaLabel } from '@/utils/data.utils';
 import { FaReadme } from 'react-icons/fa';
 import NextLink from 'next/link';
+import { Chip } from 'unremarkable-ui';
 
 export const ProjectCard = ({
   title,
@@ -62,7 +63,9 @@ export const ProjectCard = ({
       </div>
       <div className="flex flex-wrap gap-2">
         {technologies.map((name) => (
-          <Chip key={name}>{name}</Chip>
+          <Chip variant="subtle" size="sm" key={name}>
+            {name}
+          </Chip>
         ))}
       </div>
     </div>
