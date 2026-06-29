@@ -1,12 +1,12 @@
 'use client';
 import NextLink from 'next/link';
-import { Button, Typography } from '@/components/base';
+import { Typography } from '@/components/base';
 import Logo from './Logo';
 import ThemeButton from './ThemeButton';
 import { nav } from './data';
 import { FaBars } from 'react-icons/fa';
 import { useDrawer } from '@/contexts/DrawerContext';
-import { Link } from 'unremarkable-ui';
+import { IconButton, Link } from 'unremarkable-ui';
 
 const Header = () => {
   const { toggle } = useDrawer();
@@ -30,9 +30,7 @@ const Header = () => {
         </div>
       </div>
       <div className="lg:hidden py-8">
-        <Button variant="ghost" onClick={toggle}>
-          <FaBars fontSize={24} />
-        </Button>
+        <IconButton variant="ghost" size="lg" icon={FaBars} onClick={toggle} />
       </div>
     </header>
   );
