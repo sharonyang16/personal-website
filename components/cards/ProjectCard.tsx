@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { Chip, Link, Typography } from '@/components/base';
 import { ProjectCardProps } from '@/types/data';
 import { ProjectLinkIcon, toAriaLabel } from '@/utils/data.utils';
 import { FaReadme } from 'react-icons/fa';
 import NextLink from 'next/link';
+import { Chip, Link, Typography } from 'unremarkable-ui';
 
 export const ProjectCard = ({
   title,
@@ -28,14 +28,14 @@ export const ProjectCard = ({
       </div>
       <div className="flex flex-col gap-1 pl-1">
         <div className="flex justify-between items-end min-h-10">
-          <Typography intent="subheadding2">{title}</Typography>
+          <Typography variant="h4">{title}</Typography>
           <div className="flex gap-2">
             <Link
               href={`/work/${title
                 .toLowerCase()
                 .replaceAll(/[^\w ]/g, '')
                 .replaceAll(/\s+/g, '-')}`}
-              variant="buttonSecondary"
+              variant="iconButtonOutline"
               className="rounded-full flex items-center justify-center"
               as={NextLink}
             >
@@ -45,7 +45,7 @@ export const ProjectCard = ({
             {links?.map((link) => (
               <Link
                 key={`${title}-${link.type}`}
-                variant="buttonSecondary"
+                variant="iconButtonOutline"
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -58,11 +58,13 @@ export const ProjectCard = ({
           </div>
         </div>
 
-        <Typography intent="paragraph2">{description}</Typography>
+        <Typography variant="body2">{description}</Typography>
       </div>
       <div className="flex flex-wrap gap-2">
         {technologies.map((name) => (
-          <Chip key={name}>{name}</Chip>
+          <Chip variant="subtle" size="sm" key={name}>
+            {name}
+          </Chip>
         ))}
       </div>
     </div>

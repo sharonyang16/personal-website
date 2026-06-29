@@ -1,4 +1,4 @@
-import { Typography } from '@/components/base';
+import { Typography } from 'unremarkable-ui';
 
 type BrowseGridRowProps = {
   title: string;
@@ -10,7 +10,7 @@ export const BrowseGridRow = ({ title, cta, children }: BrowseGridRowProps) => {
   return (
     <>
       <div className="flex flex-col gap-4">
-        <Typography intent="subheadding1">{title}</Typography>
+        <Typography variant="h3">{title}</Typography>
         {cta}
       </div>
       <div className="flex flex-col gap-8 col-span-2">{children}</div>
@@ -35,10 +35,8 @@ export const BrowseHeading = ({
       <div className={`col-span-2 ${isHomePage && 'py-16'}`}>
         <div className="flex flex-col w-full gap-8">
           <div className="flex flex-col gap-2">
-            <Typography intent={isHomePage ? 'heading1' : 'heading2'}>
-              {title}
-            </Typography>
-            <Typography intent="paragraph1">{description}</Typography>
+            <Typography variant={isHomePage ? 'h1' : 'h2'}>{title}</Typography>
+            <Typography variant="body1">{description}</Typography>
           </div>
         </div>
       </div>
