@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import type { ProjectCardProps } from '@/types/data';
+import { cache } from 'react';
 
 const postsDir = path.join(process.cwd(), 'content/posts');
 
@@ -17,11 +18,11 @@ export type PostMeta = {
   links?: { type: string; url: string }[];
 };
 
-export const getPostBySlug = (slug: string) => {
+export const getPostBySlug = cache(async (slug: string) => {
   const raw = fs.readFileSync(path.join(postsDir, `${slug}.mdx`), 'utf8');
-  const { data, content } = matter(raw);
-  return { meta: data, content };
-};
+  const { data: meta, content } = matter(raw);
+  return { meta, content };
+});
 
 export const getAllPosts = (): PostMeta[] => {
   return fs
