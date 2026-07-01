@@ -1,12 +1,10 @@
-import { getAllPosts } from '@/utils/posts';
+import { getAllPosts, getPostBySlug } from '@/utils/posts';
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import matter from 'gray-matter';
-import fs from 'fs';
-import path from 'path';
 import Image from 'next/image';
 import { ProjectLinkIcon, toAriaLabel } from '@/utils/data.utils';
 import { ReactNode } from 'react';
 import { Chip, Link, Typography } from 'unremarkable-ui';
+import { Metadata } from 'next';
 
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -31,17 +29,26 @@ const components = {
   ),
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const { meta } = await getPostBySlug(slug);
+  return {
+    title: meta.title,
+  };
+}
+
 export default async function PostPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const raw = fs.readFileSync(
-    path.join(process.cwd(), 'content/posts', `${slug}.mdx`),
-    'utf8'
-  );
-  const { data: meta, content } = matter(raw);
+
+  const { meta, content } = await getPostBySlug(slug);
 
   return (
     <article className="mx-auto h-full">

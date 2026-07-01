@@ -1,13 +1,6 @@
 @import '../node_modules/unremarkable-ui/dist/unremarkable-ui.css';
 @import 'tailwindcss';
 
-@theme {
-  --font-family-sans: var(--font-sans);
-  --font-family-serif: var(--font-serif);
-}
-
 html {
   scroll-behavior: smooth;
 }
-
-@custom-variant dark (&:where(.dark, .dark *));
